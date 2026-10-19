@@ -423,6 +423,18 @@
       .cta--photo p { color: #e3e6e8; }
 
       .foot__why { font-size: 14px; color: #d3d7d9; }
+      .foot__why a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+
+      /* Why 511 */
+      .x-num { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: var(--orange-text); }
+      .x-link { display: inline-flex; align-items: center; min-height: 44px; width: fit-content; font-size: 15px; font-weight: 600; color: var(--orange-text); }
+      .x-link:hover { color: var(--ink); }
+      .x-sub { margin: 56px 0 24px; }
+      .x-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: s; }
+      .x-steps li { counter-increment: s; display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; background: var(--off); border: 1px solid var(--line); border-radius: var(--r-s); }
+      .x-steps li::before { content: "0" counter(s); flex: none; min-width: 28px; font-size: 15px; font-weight: 800; color: var(--orange-text); line-height: 1.6; }
+      .x-close { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 32px; }
+      @media (max-width: 520px) { .x-close .btn { width: 100%; } }
 
       .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
       @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -437,6 +449,7 @@
         </a>
         <ul class="nav__links">
           <li><a href="#watch">Watch</a></li>
+          <li><a href="#why511">Why 511</a></li>
           <li><a href="#work">Work With Me</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="#partners">Partners</a></li>
@@ -454,6 +467,7 @@
       <nav class="menu" id="menu" aria-label="Menu">
         <a href="#watch">Watch</a>
         <a href="#guide">Free Guide</a>
+        <a href="#why511">Why 511</a>
         <a href="#work">Work With Me</a>
         <a href="#courses">Courses</a>
         <a href="#partners">Partners</a>
@@ -607,6 +621,44 @@
               <a class="guide-done__link" href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener">Join the community on Discord</a>
             </div>
             <!-- /EMAIL PROVIDER FORM -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Why 511 -->
+      <hr class="stripe" />
+      <section class="sec" id="why511">
+        <div class="wrap">
+          <div class="sec__head">
+            <p class="eyebrow">Why 511</p>
+            <h2>Two numbers every resident should know.</h2>
+            <p class="lead">Dial 511 and you learn how your streets are working right now. Dial 311 and you can start changing them. Mr. Barricade 511 lives in that gap.</p>
+          </div>
+          <div class="duo">
+            <article class="card">
+              <p class="x-num">511</p>
+              <h3>Travel info</h3>
+              <p class="muted">In July 2000 the FCC set aside 511 as the national number for traveler information. Most states and regions now use it for traffic, transit, road closures and construction. In the Bay Area, 511.org is run by MTC and covers transit schedules, trip planning, bicycling, carpooling and FasTrak. It's what you check before you go.</p>
+              <a class="x-link" href="https://511.org" target="_blank" rel="noopener">511.org</a>
+            </article>
+            <article class="card">
+              <p class="x-num">311</p>
+              <h3>Your city</h3>
+              <p class="muted">311 connects you to non emergency city services. Baltimore launched the first in 1996, and Chicago built the first full service request system in 1999. San Jose, San Francisco, Oakland and hundreds of other places have one now. Use it for potholes, broken streetlights, faded crosswalks, dark signals and debris in the road.</p>
+              <p class="press">"Burning building? Call 911. Burning question? Call 311." <span class="small">City of Akron</span></p>
+            </article>
+          </div>
+          <h3 class="x-sub">How to file a 311 report that gets fixed</h3>
+          <ol class="x-steps">
+            <li><span>Pin the exact spot: an address or the nearest intersection, and which corner.</span></li>
+            <li><span>Add a photo, ideally with something for scale.</span></li>
+            <li><span>Say what's wrong and who it puts at risk: kids walking to school, people on bikes, wheelchair users.</span></li>
+            <li><span>Save the ticket number.</span></li>
+            <li><span>If it keeps happening, bring your ticket numbers to public comment. One report fixes a hazard. A pattern of reports gets a street onto a project list.</span></li>
+          </ol>
+          <div class="x-close">
+            <p>The free guide walks you through the public comment part.</p>
+            <a class="btn btn--primary" href="/guide">Get the free guide</a>
           </div>
         </div>
       </section>
@@ -917,6 +969,7 @@
         </div>
         <div class="foot__bottom">
           <p>Views are my own and don't represent Kimley-Horn.</p>
+          <p class="foot__why"><a href="#why511">Why 511?</a></p>
           <p>© 2026 Mr. Barricade</p>
         </div>
       </div>
