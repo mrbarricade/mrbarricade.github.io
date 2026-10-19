@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mr. Barricade | Vignesh Swaminathan, PE</title>
+    <meta name="description" content="Licensed civil engineer explaining how streets get designed and how you can change yours. Free guide, 1-1 consults, speaking and brand partnerships." />
+    <meta name="theme-color" content="#2F3437" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mr. Barricade" />
+    <meta property="og:title" content="Mr. Barricade | Vignesh Swaminathan, PE" />
+    <meta property="og:description" content="Licensed civil engineer explaining how streets get designed and how you can change yours. Free guide, 1-1 consults, speaking and brand partnerships." />
+    <meta property="og:url" content="https://mrbarricade511.com/" />
+    <meta property="og:image" content="vignesh-bike-lane.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mr. Barricade | Vignesh Swaminathan, PE" />
+    <meta name="twitter:description" content="Licensed civil engineer explaining how streets get designed and how you can change yours." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <style>
+      :root {
+        --ink: #2F3437;
+        --ink-2: #5b6266;
+        --orange: #F26A1B;
+        --orange-dark: #d9560c;
+        --orange-text: #b04405;
+        --orange-on-dark: #ff9a5c;
+        --white: #ffffff;
+        --off: #f7f5f2;
+        --line: #e6e2dc;
+        --r: 18px;
+        --r-s: 12px;
+        --max: 1160px;
+        --pad: 20px;
+        --shadow: 0 1px 2px rgba(47,52,55,.06), 0 8px 28px rgba(47,52,55,.08);
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0; background: var(--white); color: var(--ink);
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 17px; line-height: 1.6; overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; }
+      h1, h2, h3 { line-height: 1.1; letter-spacing: -0.025em; margin: 0; font-weight: 800; }
+      h1 { font-size: clamp(40px, 9vw, 72px); }
+      h2 { font-size: clamp(30px, 6vw, 46px); }
+      h3 { font-size: 21px; letter-spacing: -0.015em; font-weight: 700; }
+      p { margin: 0; }
+      .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+      .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--orange-text); }
+      .lead { font-size: 19px; color: var(--ink-2); max-width: 60ch; }
+      .muted { color: var(--ink-2); }
+      .small { font-size: 14px; color: var(--ink-2); }
+      :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        min-height: 52px; padding: 0 26px; border-radius: 999px;
+        font: inherit; font-size: 16px; font-weight: 700; text-decoration: none; cursor: pointer;
+        border: 2px solid var(--ink); background: transparent; color: var(--ink);
+        transition: background .15s ease, color .15s ease, transform .15s ease, border-color .15s ease;
+      }
+      .btn:hover { background: var(--ink); color: var(--white); }
+      .btn:active { transform: translateY(1px); }
+      .btn--primary { background: var(--orange); border-color: var(--orange); color: var(--white); }
+      .btn--primary:hover { background: var(--orange-dark); border-color: var(--orange-dark); color: var(--white); }
+      .btn--light { border-color: var(--white); color: var(--white); }
+      .btn--light:hover { background: var(--white); color: var(--ink); }
+      .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+      @media (max-width: 520px) { .btns .btn { width: 100%; } }
+
+      /* Stripe divider */
+      .stripe {
+        height: 8px; border: 0; margin: 0;
+        background: repeating-linear-gradient(-45deg, var(--orange) 0 14px, var(--white) 14px 28px);
+        border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      }
+      .stripe--short { width: 72px; height: 8px; border-radius: 4px; border: 1px solid var(--line); margin-bottom: 18px; }
+
+      /* Nav */
+      .nav {
+        position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.94);
+        backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav__bar { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 16px; }
+      .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; min-height: 44px; }
+      .logo { width: 48px; height: 32px; overflow: hidden; position: relative; flex: none; }
+      .logo img { position: absolute; width: 84px; max-width: none; height: auto; left: -18px; top: -7px; }
+      .nav__links { display: none; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+      .nav__links a:not(.btn) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; font-size: 15px; font-weight: 600; text-decoration: none; color: var(--ink); border-radius: 8px; }
+      .nav__links a:not(.btn):hover { color: var(--orange-dark); }
+      .nav__links .btn { min-height: 44px; padding: 0 20px; font-size: 15px; margin-left: 8px; }
+      .burger { width: 48px; height: 48px; border: 0; background: transparent; border-radius: 12px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); }
+      .burger svg { width: 26px; height: 26px; }
+      .burger .i-close { display: none; }
+      .nav.is-open .burger .i-open { display: none; }
+      .nav.is-open .burger .i-close { display: block; }
+      .menu { display: none; border-top: 1px solid var(--line); background: var(--white); padding: 8px var(--pad) 22px; max-height: 80vh; overflow-y: auto; }
+      .nav.is-open .menu { display: block; }
+      .menu a:not(.btn) { display: flex; align-items: center; justify-content: space-between; min-height: 60px; font-size: 19px; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--line); }
+      .menu a:not(.btn)::after { content: ""; width: 9px; height: 9px; border-top: 2.5px solid var(--orange); border-right: 2.5px solid var(--orange); transform: rotate(45deg); margin-right: 6px; }
+      .menu .btn { width: 100%; margin-top: 18px; }
+      @media (min-width: 1120px) {
+        .nav__links { display: flex; }
+        .burger, .menu, .nav.is-open .menu { display: none; }
+      }
+
+      /* Hero */
+      .hero { padding: 36px 0 48px; }
+      .hero__grid { display: grid; gap: 32px; align-items: center; }
+      .hero__copy { display: grid; gap: 20px; }
+      .hero__media { position: relative; }
+      .hero__media img { width: 100%; height: auto; border-radius: var(--r); box-shadow: var(--shadow); }
+      .hero__media::after {
+        content: ""; position: absolute; left: 20px; right: 20px; bottom: -10px; height: 10px; border-radius: 0 0 8px 8px;
+        background: repeating-linear-gradient(-45deg, var(--orange) 0 12px, var(--white) 12px 24px); z-index: -1;
+      }
+      @media (min-width: 880px) {
+        .hero { padding: 72px 0 80px; }
+        .hero__grid { grid-template-columns: 1.1fr 1fr; gap: 64px; }
+      }
+
+      .proof { background: var(--off); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .proof .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 36px; padding-top: 18px; padding-bottom: 18px; text-align: center; font-size: 15px; color: var(--ink-2); }
+      .proof strong { color: var(--ink); font-weight: 700; }
+
+      /* Sections */
+      .sec { padding: 72px 0; }
+      .sec--off { background: var(--off); }
+      .sec__head { display: grid; gap: 14px; margin-bottom: 36px; max-width: 760px; }
+      @media (min-width: 880px) { .sec { padding: 104px 0; } }
+
+      /* Stats */
+      .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .stat { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 18px; }
+      .stat__fig { display: block; font-size: clamp(30px, 7vw, 44px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+      .stat__fig em { font-style: normal; color: var(--orange); }
+      .stat__label { display: block; margin-top: 8px; font-size: 15px; color: var(--ink-2); line-height: 1.4; }
+      @media (min-width: 880px) { .stats { grid-template-columns: repeat(4, 1fr); gap: 20px; } .stat { padding: 28px 24px; } }
+
+      /* Cards and lists */
+      .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 28px 24px; box-shadow: var(--shadow); }
+      @media (min-width: 640px) { .card { padding: 36px; } }
+      .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+      .ticks li { position: relative; padding-left: 34px; }
+      .ticks li::before {
+        content: ""; position: absolute; left: 0; top: 3px; width: 22px; height: 22px; border-radius: 50%;
+        background: var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat;
+      }
+
+      /* Guide */
+      .guide { display: grid; gap: 40px; align-items: start; }
+      .guide__img { border-radius: var(--r); border: 1px solid var(--line); box-shadow: var(--shadow); width: 100%; height: auto; background: var(--white); }
+      .guide__copy { display: grid; gap: 22px; }
+      @media (min-width: 880px) { .guide { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; } }
+
+      /* Forms */
+      .form { display: grid; gap: 14px; }
+      .form label { display: grid; gap: 6px; font-size: 15px; font-weight: 600; }
+      .form input, .form select, .form textarea {
+        width: 100%; min-height: 52px; padding: 12px 16px; font: inherit; font-size: 16px; color: var(--ink);
+        background: var(--white); border: 1.5px solid #cfcac3; border-radius: var(--r-s);
+        transition: border-color .15s ease, box-shadow .15s ease;
+      }
+      .form textarea { min-height: 140px; resize: vertical; }
+      .form select { appearance: none; -webkit-appearance: none; padding-right: 44px;
+        background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F3437' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 14px center/18px no-repeat; }
+      .form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 4px rgba(242,106,27,.18); }
+      .form .btn { width: 100%; margin-top: 4px; }
+      .form__row { display: grid; gap: 14px; }
+      @media (min-width: 640px) { .form__row { grid-template-columns: 1fr 1fr; } }
+      .success { display: none; align-items: center; gap: 12px; padding: 16px 18px; border-radius: var(--r-s); background: #fff1e8; border: 1.5px solid var(--orange); font-weight: 600; }
+      .success.is-shown { display: flex; }
+      .form-error { display: none; padding: 14px 18px; border-radius: var(--r-s); background: #fdecea; border: 1.5px solid #b3261e; color: #8c1d18; font-weight: 600; font-size: 15px; }
+      .form-error.is-shown { display: block; }
+      .success svg { flex: none; width: 24px; height: 24px; color: var(--orange-dark); }
+      .form .btn:disabled { opacity: .7; cursor: wait; transform: none; }
+      .guide-done { display: grid; gap: 14px; justify-items: start; padding: 24px; border-radius: var(--r-s); background: #fff1e8; border: 1.5px solid var(--orange); }
+      .guide-done[hidden] { display: none; }
+      .guide-done:focus { outline: none; }
+      .guide-done h3 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+      .guide-done p { margin: 0; font-size: 17px; }
+      .guide-done .btn--big { width: 100%; min-height: 60px; font-size: 18px; margin-top: 4px; }
+      .guide-done__link { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600; color: var(--orange-text); }
+      .guide-done__link:hover { color: var(--ink); }
+
+      /* Work */
+      .work { display: grid; gap: 24px; align-items: start; }
+      .price { background: var(--ink); color: var(--white); border-radius: var(--r); padding: 32px 26px; display: grid; gap: 18px; position: relative; overflow: hidden; }
+      .price::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: repeating-linear-gradient(-45deg, var(--orange) 0 14px, var(--white) 14px 28px); }
+      .price__fig { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+      .price__meta { display: flex; flex-wrap: wrap; gap: 8px; }
+      .price__meta span { font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: #464c50; color: var(--white); }
+      .price .btn { width: 100%; }
+      @media (min-width: 880px) { .work { grid-template-columns: 1.4fr 1fr; gap: 32px; } .price { position: sticky; top: 96px; padding: 40px 36px; } }
+
+      /* Courses */
+      .course { display: grid; gap: 22px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 32px 24px; box-shadow: var(--shadow); }
+      .tag { display: inline-flex; align-items: center; gap: 8px; width: fit-content; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: #fff1e8; color: var(--orange-text); }
+      .tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+      @media (min-width: 880px) { .course { grid-template-columns: 1.5fr auto; align-items: center; padding: 48px; gap: 48px; } }
+
+      /* Two cards */
+      .duo { display: grid; gap: 20px; }
+      .duo .card { display: grid; gap: 18px; align-content: start; }
+      .duo .card .btn { margin-top: 6px; width: fit-content; }
+      .talks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: t; }
+      .talks li { counter-increment: t; display: flex; gap: 14px; align-items: center; padding: 14px 16px; background: var(--off); border-radius: var(--r-s); font-weight: 600; }
+      .talks li::before { content: "0" counter(t); font-size: 13px; font-weight: 800; color: var(--orange-dark); }
+      .bigline { font-size: 22px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.3; }
+      @media (min-width: 880px) { .duo { grid-template-columns: 1fr 1fr; gap: 28px; } }
+      @media (max-width: 520px) { .duo .card .btn { width: 100%; } }
+
+      /* Community */
+      .band { background: var(--ink); color: var(--white); position: relative; }
+      .band .lead { color: #d3d7d9; }
+      .band .eyebrow, .price .eyebrow { color: var(--orange-on-dark) !important; }
+      .band__inner { display: grid; gap: 22px; max-width: 760px; }
+
+      /* About */
+      .about { display: grid; gap: 28px; }
+      .about .prose { display: grid; gap: 18px; font-size: 18px; max-width: 68ch; }
+      .press { border-left: 4px solid var(--orange); padding: 6px 0 6px 18px; font-weight: 600; }
+      @media (min-width: 880px) { .about { grid-template-columns: 1fr 2fr; gap: 64px; } }
+
+      /* Gear */
+      .gear { display: grid; gap: 12px; }
+      .gear a { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 72px; padding: 16px 20px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-s); text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
+      .gear a:hover { border-color: var(--orange); transform: translateY(-1px); }
+      .gear b { display: block; font-weight: 700; }
+      .gear small { display: block; font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+      .gear svg { flex: none; width: 20px; height: 20px; color: var(--orange-dark); }
+      @media (min-width: 640px) { .gear { grid-template-columns: 1fr 1fr; } }
+      @media (min-width: 1040px) { .gear { grid-template-columns: repeat(4, 1fr); } }
+
+      /* Contact */
+      .contact { display: grid; gap: 32px; }
+      @media (min-width: 880px) { .contact { grid-template-columns: 1fr 1.4fr; gap: 64px; } }
+
+      /* Footer */
+      .foot { background: var(--ink); color: #d3d7d9; padding: 56px 0 40px; font-size: 15px; }
+      .foot__top { display: grid; gap: 24px; justify-items: start; }
+      .foot .brand { color: var(--white); }
+      .foot .logo { background: var(--white); border-radius: 10px; width: 56px; height: 40px; }
+      .foot .logo img { width: 92px; left: -20px; top: -4px; }
+      .socials { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+      .socials a { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.08); color: var(--white); transition: background .15s ease; }
+      .socials a:hover { background: var(--orange); }
+      .socials svg { width: 20px; height: 20px; }
+      .foot__bottom { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.14); display: grid; gap: 8px; }
+      @media (min-width: 880px) { .foot__top { grid-template-columns: 1fr auto; align-items: center; } .foot__bottom { grid-template-columns: 1fr auto; } }
+
+      /* Hero quick chips */
+      .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+      .qchip { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 18px; border-radius: 999px; background: var(--off); border: 1px solid var(--line); font-size: 15px; font-weight: 600; text-decoration: none; transition: border-color .15s ease, background .15s ease; }
+      .qchip svg { flex: none; width: 18px; height: 18px; color: var(--orange-dark); }
+      .qchip:hover { border-color: var(--orange); background: #fff1e8; }
+      @media (max-width: 520px) {
+        .chips { display: grid; grid-template-columns: repeat(3, 1fr); }
+        .qchip { flex-direction: column; gap: 4px; min-height: 68px; padding: 8px 6px; border-radius: var(--r-s); font-size: 14px; text-align: center; line-height: 1.2; }
+        .qchip svg { width: 20px; height: 20px; }
+      }
+
+      /* Swipe rails: carousel on phones, grid on desktop */
+      .rail { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(var(--pad) * -1); padding: 6px var(--pad) 20px; scroll-padding: 0 var(--pad); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+      .rail::-webkit-scrollbar { display: none; }
+      .rail > * { flex: 0 0 auto; scroll-snap-align: start; }
+      .swipe { display: flex; align-items: center; gap: 8px; margin-top: -4px; font-size: 14px; font-weight: 600; color: var(--ink-2); }
+      .swipe svg { width: 18px; height: 18px; color: var(--orange-dark); }
+      @media (min-width: 880px) {
+        .rail { display: grid; overflow: visible; margin: 0; padding: 0; gap: 20px; }
+        .swipe { display: none; }
+      }
+
+      /* Video cards */
+      .vid { position: relative; display: flex; flex-direction: column; border-radius: var(--r); overflow: hidden; background: var(--ink); color: var(--white); text-decoration: none; box-shadow: var(--shadow); }
+      .vid__media { position: relative; display: block; overflow: hidden; }
+      .vid__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+      .vid:hover .vid__media img { transform: scale(1.04); }
+      .vid__play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; border-radius: 50%; background: var(--orange); color: var(--white); display: grid; place-items: center; z-index: 2; box-shadow: 0 6px 20px rgba(0,0,0,.3); transition: transform .2s ease; }
+      .vid__play svg { width: 24px; height: 24px; margin-left: 3px; }
+      .vid:hover .vid__play, .tv:hover .vid__play { transform: translate(-50%, -50%) scale(1.08); }
+      .vid__text { display: grid; gap: 6px; padding: 16px; z-index: 2; }
+      .vid__title { font-weight: 700; font-size: 17px; line-height: 1.25; letter-spacing: -0.01em; }
+      .vid__label { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #e3e6e8; }
+      .vid__label svg { width: 16px; height: 16px; color: var(--orange-on-dark); }
+      .vid--tall { width: 62vw; max-width: 260px; aspect-ratio: 9 / 16; }
+      .vid--tall .vid__media { position: absolute; inset: 0; }
+      .vid--tall::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(26,29,31,.92) 0%, rgba(26,29,31,.35) 38%, rgba(26,29,31,0) 62%); }
+      .vid--tall .vid__text { position: absolute; left: 0; right: 0; bottom: 0; }
+      .vid--wide { width: 84vw; max-width: 420px; }
+      .vid--wide .vid__media { aspect-ratio: 16 / 9; }
+      .vid--wide .vid__text { margin-top: auto; }
+      @media (min-width: 880px) {
+        .rail--vids { grid-template-columns: repeat(6, 1fr); gap: 16px; }
+        .vid--tall, .vid--wide { width: auto; max-width: none; }
+        .vid--wide { grid-column: span 2; }
+        .vid__title { font-size: 16px; }
+      }
+
+      /* Follow buttons */
+      .follow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
+      .follow a { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px 16px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--white); text-decoration: none; font-weight: 700; line-height: 1.2; transition: border-color .15s ease, transform .15s ease; }
+      .follow a:hover { border-color: var(--orange); transform: translateY(-1px); }
+      .follow svg { flex: none; width: 24px; height: 24px; }
+      .follow small { display: block; font-size: 13px; font-weight: 600; color: var(--ink-2); margin-top: 2px; }
+      @media (min-width: 880px) { .follow { grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 32px; } }
+
+      /* Academy tracks */
+      .track { display: grid; gap: 12px; align-content: start; width: 78vw; max-width: 320px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 24px; box-shadow: var(--shadow); }
+      .track__top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+      .track__icon { width: 52px; height: 52px; border-radius: 14px; background: #fff1e8; color: var(--orange-dark); display: grid; place-items: center; flex: none; }
+      .track__icon svg { width: 28px; height: 28px; }
+      .track__num { font-size: 13px; font-weight: 800; letter-spacing: .06em; color: var(--ink-2); }
+      .track p { font-size: 16px; line-height: 1.5; color: var(--ink-2); }
+      .track h3 { font-size: 20px; }
+      .track--first { border: 2px solid var(--orange); }
+      .academy__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 28px; }
+      @media (min-width: 880px) {
+        .rail--tracks { grid-template-columns: repeat(3, 1fr); }
+        .track { width: auto; max-width: none; }
+      }
+      @media (min-width: 1120px) { .rail--tracks { grid-template-columns: repeat(5, 1fr); gap: 16px; } .track { padding: 22px 20px; } }
+
+      /* Partner products */
+      .prod { display: flex; flex-direction: column; width: 72vw; max-width: 300px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; text-decoration: none; box-shadow: var(--shadow); transition: border-color .15s ease, transform .15s ease; }
+      .prod:hover { border-color: var(--orange); transform: translateY(-2px); }
+      .prod__media { aspect-ratio: 4 / 3; display: grid; place-items: center; background: var(--white); border-bottom: 1px solid var(--line); overflow: hidden; }
+      .prod__media img { width: 100%; height: 100%; object-fit: contain; }
+      .prod__media--ink { background: var(--ink); color: var(--white); }
+      .prod__media--orange { background: var(--orange); color: var(--white); }
+      .prod__media svg { width: 72px; height: 72px; }
+      .prod__body { display: flex; flex-direction: column; gap: 10px; padding: 20px; flex: 1; }
+      .prod__brand { font-size: 20px; font-weight: 800; letter-spacing: -0.015em; line-height: 1.2; }
+      .prod__line { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+      .code { width: fit-content; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: #fff1e8; color: var(--orange-text); border: 1.5px dashed var(--orange); }
+      .prod .btn { margin-top: auto; width: 100%; min-height: 48px; }
+      .disclose { font-size: 14px; color: var(--ink-2); max-width: 62ch; }
+      @media (min-width: 880px) {
+        .rail--prods { grid-template-columns: repeat(3, 1fr); }
+        .prod { width: auto; max-width: none; }
+      }
+      @media (min-width: 1120px) { .rail--prods { grid-template-columns: repeat(4, 1fr); } }
+
+      /* Audience strip */
+      .aud { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+      .aud div { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-s); padding: 14px 16px; }
+      .aud b { display: block; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+      .aud span { display: block; font-size: 14px; color: var(--ink-2); line-height: 1.35; margin-top: 2px; }
+      @media (min-width: 880px) { .aud { grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; } .aud div { padding: 18px 20px; } }
+      .workshop { padding: 16px 18px; border-radius: var(--r-s); background: #fff1e8; border-left: 4px solid var(--orange); font-size: 16px; line-height: 1.5; }
+
+      /* About extras */
+      .about__side { display: grid; gap: 24px; align-content: start; }
+      .tv { display: block; border-radius: var(--r); overflow: hidden; background: var(--ink); color: var(--white); text-decoration: none; box-shadow: var(--shadow); }
+      .tv .vid__media { aspect-ratio: 16 / 9; }
+      .tv:hover .vid__media img { transform: scale(1.04); }
+      .tv__cap { display: flex; align-items: center; gap: 10px; min-height: 58px; padding: 14px 18px; font-weight: 700; font-size: 16px; }
+      .tv__cap svg { flex: none; width: 18px; height: 18px; color: var(--orange-on-dark); }
+      .hl { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+      .hl li { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--off); border-radius: var(--r-s); font-size: 16px; font-weight: 600; line-height: 1.35; }
+      .hl svg { flex: none; width: 38px; height: 38px; padding: 9px; border-radius: 10px; background: var(--ink); color: var(--white); }
+
+      /* Community photo band */
+      .band--photo { overflow: hidden; }
+      .band__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .band--photo::before { content: ""; position: absolute; inset: 0; z-index: 1; background: rgba(47,52,55,.86); }
+      .band--photo .wrap { position: relative; z-index: 2; }
+      .band .ticks li { font-weight: 600; font-size: 18px; }
+      @media (min-width: 880px) { .band--photo::before { background: linear-gradient(90deg, rgba(47,52,55,.95) 0%, rgba(47,52,55,.84) 55%, rgba(47,52,55,.55) 100%); } }
+
+      /* Final CTA */
+      .cta { position: relative; overflow: hidden; display: grid; gap: 22px; background: var(--ink); color: var(--white); border-radius: var(--r); padding: 44px 24px 32px; }
+      .cta::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: repeating-linear-gradient(-45deg, var(--orange) 0 14px, var(--white) 14px 28px); }
+      .cta p { color: #d3d7d9; font-size: 18px; }
+      @media (min-width: 880px) { .cta { grid-template-columns: 1fr auto; align-items: center; gap: 40px; padding: 60px 56px 52px; } }
+
+      /* Sticky phone bar */
+      .sbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px var(--pad) calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--line); box-shadow: 0 -6px 24px rgba(47,52,55,.1); transform: translateY(110%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; }
+      .sbar.is-shown { transform: none; visibility: visible; transition: transform .25s ease; }
+      .sbar .btn { width: 100%; min-height: 50px; padding: 0 10px; font-size: 15px; }
+      @media (min-width: 880px) { .sbar { display: none; } }
+      @media (max-width: 879px) { .foot { padding-bottom: 112px; } }
+
+      .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+    </style>
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <div class="wrap nav__bar">
+        <a class="brand" href="#top" aria-label="Mr. Barricade, back to top">
+          <span class="logo"><img src="logo.png" alt="" width="1408" height="768" /></span>
+          <span>Mr. Barricade</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="#watch">Watch</a></li>
+          <li><a href="#work">Work With Me</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#brands">Brands &amp; Speaking</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn btn--primary" href="#guide">Free Guide</a></li>
+        </ul>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+      <nav class="menu" id="menu" aria-label="Menu">
+        <a href="#watch">Watch</a>
+        <a href="#guide">Free Guide</a>
+        <a href="#work">Work With Me</a>
+        <a href="#courses">Courses</a>
+        <a href="#partners">Partners</a>
+        <a href="#brands">Brands &amp; Speaking</a>
+        <a href="#community">Community</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--primary" href="#guide">Get the free guide</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- 1. Hero -->
+      <section class="hero">
+        <div class="wrap hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Licensed civil engineer · @mrbarricade</p>
+            <h1>Safer streets, explained.</h1>
+            <p class="lead">I'm Vignesh Swaminathan, PE. I design protected bike lanes and safer intersections, and I teach 1.6M people how streets get designed and how to change yours.</p>
+            <div class="btns">
+              <a class="btn btn--primary" href="#guide">Get the free guide</a>
+              <a class="btn" href="#work">Book a 1-1 consult</a>
+            </div>
+            <div class="chips" aria-label="Quick actions">
+              <a class="qchip" href="#guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14" /></svg>Free guide</a>
+              <a class="qchip" href="#watch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5" /><path d="M10 8.5l5.5 3.5-5.5 3.5z" fill="currentColor" /></svg>Watch</a>
+              <a class="qchip" href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z" /></svg>Join Discord</a>
+            </div>
+          </div>
+          <div class="hero__media">
+            <img src="vignesh-bike-lane.jpg" width="731" height="697" alt="Vignesh Swaminathan in a navy suit, sitting on a bollard beside a yellow bike in a green protected bike lane" />
+          </div>
+        </div>
+      </section>
+
+      <div class="proof">
+        <div class="wrap">
+          <p>Featured in <strong>Mercury News, SFGate and MEL</strong></p>
+          <p>Podcast guest on <strong>Strong Towns, The War on Cars and Active Towns</strong></p>
+        </div>
+      </div>
+
+      <!-- 2. Stats -->
+      <section class="sec sec--off" aria-label="At a glance" style="padding-top: 48px; padding-bottom: 48px;">
+        <div class="wrap stats">
+          <div class="stat"><span class="stat__fig">1.6M</span><span class="stat__label">Followers on TikTok</span></div>
+          <div class="stat"><span class="stat__fig">11 <em>yrs</em></span><span class="stat__label">In active transportation and highway design</span></div>
+          <div class="stat"><span class="stat__fig">100+</span><span class="stat__label">Protected corners designed in California</span></div>
+          <div class="stat"><span class="stat__fig">NACTO</span><span class="stat__label">Guide contributor, "Don't Give Up at the Intersection"</span></div>
+        </div>
+      </section>
+
+      <!-- Watch -->
+      <section class="sec" id="watch">
+        <div class="wrap">
+          <div class="sec__head">
+            <p class="eyebrow">Watch</p>
+            <h2>Streets, explained in 60 seconds</h2>
+            <p class="lead">Short videos on bike lanes, buses and intersections, filmed on real streets.</p>
+          </div>
+          <div class="rail rail--vids">
+            <a class="vid vid--tall" href="https://www.youtube.com/watch?v=GYD6Re1rzmA" target="_blank" rel="noopener">
+              <span class="vid__media"><img src="v-GYD6Re1rzmA.jpg" width="405" height="720" alt="Vignesh at a VTA bus stop" loading="lazy" /></span>
+              <span class="vid__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z" /></svg></span>
+              <span class="vid__text"><span class="vid__title">I wanna ride the bus with somebody</span><span class="vid__label"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg>Watch on YouTube</span></span>
+            </a>
+            <a class="vid vid--tall" href="https://www.youtube.com/watch?v=PSoXYP34E9o" target="_blank" rel="noopener">
+              <span class="vid__media"><img src="v-PSoXYP34E9o.jpg" width="405" height="720" alt="Vignesh in sunglasses on a red bus lane in San Francisco" loading="lazy" /></span>
+              <span class="vid__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z" /></svg></span>
+              <span class="vid__text"><span class="vid__title">New rapid bus transit in San Francisco</span><span class="vid__label"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg>Watch on YouTube</span></span>
+            </a>
+            <a class="vid vid--tall" href="https://www.youtube.com/watch?v=h6go47LUC34" target="_blank" rel="noopener">
+              <span class="vid__media"><img src="v-h6go47LUC34.jpg" width="204" height="360" alt="Vignesh by a green bike lane" loading="lazy" /></span>
+              <span class="vid__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z" /></svg></span>
+              <span class="vid__text"><span class="vid__title">Bus and bike lane solution</span><span class="vid__label"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg>Watch on YouTube</span></span>
+            </a>
+            <a class="vid vid--tall" href="https://www.youtube.com/watch?v=rLO6Cd2Fhbg" target="_blank" rel="noopener">
+              <span class="vid__media"><img src="v-rLO6Cd2Fhbg.jpg" width="204" height="360" alt="Vignesh in a suit and green tie by a curb" loading="lazy" /></span>
+              <span class="vid__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z" /></svg></span>
+              <span class="vid__text"><span class="vid__title">Protected intersection best practices</span><span class="vid__label"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg>Watch on YouTube</span></span>
+            </a>
+            <a class="vid vid--wide" href="https://www.youtube.com/watch?v=zLuDjvgrq-I" target="_blank" rel="noopener">
+              <span class="vid__media"><img src="video-doyle-street.jpg" width="480" height="270" alt="A new protected intersection with green bike crossings on Doyle Street" loading="lazy" /><span class="vid__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z" /></svg></span></span>
+              <span class="vid__text"><span class="vid__title">Doyle Street upgrade</span><span class="vid__label"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg>Watch on YouTube</span></span>
+            </a>
+          </div>
+          <p class="swipe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>Swipe for more videos</p>
+          <div class="follow" aria-label="Follow Mr. Barricade">
+            <a href="https://www.tiktok.com/@mrbarricade" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.7z" /></svg><span>TikTok<small>1.6M followers</small></span></a>
+            <a href="https://www.youtube.com/@mrbarricade" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" style="color: #e62117;"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg><span>YouTube<small>Subscribe</small></span></a>
+            <a href="https://www.instagram.com/mrbarricade" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #c13584;"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg><span>Instagram<small>Follow</small></span></a>
+            <a href="https://www.linkedin.com/in/mrbarricade" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" style="color: #0a66c2;"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5 1 1.8 2 3.8 2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.7 1.4-2.7 2.8V21h-4z" transform="translate(0 -1.5)" /></svg><span>LinkedIn<small>Connect</small></span></a>
+          </div>
+        </div>
+      </section>
+      <hr class="stripe" />
+
+      <!-- 3. Free Guide -->
+      <section class="sec" id="guide">
+        <div class="wrap guide">
+          <div class="guide__copy">
+            <div class="sec__head" style="margin-bottom: 0;">
+              <p class="eyebrow">Free guide</p>
+              <h2>How to Change Your Street</h2>
+              <p class="lead">A free guide to public meetings, public comment, transportation and planning commissions, and 311. Written by a traffic engineer who has sat on both sides of the dais.</p>
+            </div>
+            <img class="guide__img" src="pr01.png" width="1456" height="935" alt="Preview of the guide How to Change Your Street: the cover and first page" />
+          </div>
+          <div class="card" id="guide-card" style="display: grid; gap: 22px;">
+            <h3>Inside you'll learn</h3>
+            <ul class="ticks">
+              <li>How public meetings actually work and why they matter.</li>
+              <li>Who does what: city staff, elected officials, and community speakers.</li>
+              <li>How to write a public comment that changes decisions.</li>
+              <li>When to use 311 for a specific hazard.</li>
+              <li>What to do after the meeting.</li>
+            </ul>
+            <!-- EMAIL PROVIDER FORM: replace this form with the email provider's embed when ready -->
+            <form class="form js-form" id="guide-form" action="#" method="post" novalidate>
+              <div class="form__row">
+                <label>First name<input type="text" name="first_name" autocomplete="given-name" required /></label>
+                <label>Email<input type="email" name="email" autocomplete="email" inputmode="email" required /></label>
+              </div>
+              <button class="btn btn--primary" type="submit">Send me the guide</button>
+              <p class="form-error" role="alert">Please add your first name and a valid email.</p>
+              <p class="success" role="status" aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M7.5 12.5l3 3 6-6.5" /></svg><span>Check your inbox. The guide is on its way.</span></p>
+            </form>
+            <div class="guide-done" id="guide-done" role="status" aria-live="polite" tabindex="-1" hidden>
+              <h3>You're in.</h3>
+              <p>Your guide is ready. Download it now, and save it for your next council meeting.</p>
+              <a class="btn btn--primary btn--big" href="https://drive.google.com/uc?export=download&amp;id=1Z0_qCJo4xjMLDQnnbwgj3I7-0XUT6a5B" target="_blank" rel="noopener">Download the guide (PDF)</a>
+              <a class="guide-done__link" href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener">Join the community on Discord</a>
+            </div>
+            <!-- /EMAIL PROVIDER FORM -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Work With Me -->
+      <section class="sec sec--off" id="work">
+        <div class="wrap">
+          <div class="sec__head">
+            <p class="eyebrow">Work with me</p>
+            <h2>1-1 Consultation</h2>
+            <p class="lead">Clear, practical guidance on street design and transportation projects from an engineer who has delivered them.</p>
+          </div>
+          <div class="work">
+            <div class="card" style="display: grid; gap: 20px;">
+              <h3>Who it's for</h3>
+              <ul class="ticks">
+                <li>City and regional planners looking for design insight.</li>
+                <li>Civil engineers seeking design review or mentorship.</li>
+                <li>Startups building transportation and mobility tech.</li>
+                <li>Community advocacy groups working on a street project.</li>
+                <li>Engineering students and early career professionals.</li>
+              </ul>
+              <p class="small">Education and mentorship only. Not engineering services or stamped work.</p>
+            </div>
+            <div class="price">
+              <p class="eyebrow" style="color: var(--orange);">1-1 consult</p>
+              <p class="price__fig">$80</p>
+              <div class="price__meta"><span>1 hour</span><span>Video call</span></div>
+              <!-- BOOKING LINK -->
+              <a class="btn btn--primary" href="https://cal.com/vignesh-swaminathan-mhskn0/consult" target="_blank" rel="noopener">Book a consult</a>
+              <!-- /BOOKING LINK -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Courses -->
+      <section class="sec" id="courses">
+        <div class="wrap">
+          <div class="sec__head">
+            <span class="tag">Launching soon</span>
+            <p class="eyebrow">Courses</p>
+            <h2>Street Advocate Academy</h2>
+            <p class="lead">Self-paced courses that teach the process and the engineering behind your streets. Launching soon.</p>
+          </div>
+          <div class="rail rail--tracks">
+            <article class="track track--first">
+              <div class="track__top">
+                <span class="track__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5l6-2.5 6 2.5 6-2.5v15.5l-6 2.5-6-2.5-6 2.5z" /><path d="M9 3v15.5M15 5.5V21" /></svg></span>
+                <span class="tag">First course</span>
+              </div>
+              <h3>Read the Plans</h3>
+              <p>Understand the engineering drawings your city puts out for comment.</p>
+            </article>
+            <article class="track">
+              <div class="track__top">
+                <span class="track__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3" /><circle cx="6" cy="18" r="3" /><path d="M8.1 8.1L20 20M8.1 15.9L20 4" /></svg></span>
+                <span class="track__num">02</span>
+              </div>
+              <h3>Idea to Ribbon Cutting</h3>
+              <p>How a street project moves from idea to construction, and where your input matters.</p>
+            </article>
+            <article class="track">
+              <div class="track__top">
+                <span class="track__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3.5" /><circle cx="18.5" cy="16.5" r="3.5" /><path d="M5.5 16.5L9 9h7l2.5 7.5M12 16.5L9 9M16 9l-1.5-3H17" /></svg></span>
+                <span class="track__num">03</span>
+              </div>
+              <h3>Bikeways 101</h3>
+              <p>Bike lane types, protected bike lanes and protected intersections.</p>
+            </article>
+            <article class="track">
+              <div class="track__top">
+                <span class="track__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2" /><path d="M9 21l2-6-2-3 1-4 3 1 2 3M13 15l2 6M3 22h18" /></svg></span>
+                <span class="track__num">04</span>
+              </div>
+              <h3>Safe Crossings and Access</h3>
+              <p>Crosswalks, signals and accessibility on the street.</p>
+            </article>
+            <article class="track">
+              <div class="track__top">
+                <span class="track__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg></span>
+                <span class="track__num">05</span>
+              </div>
+              <h3>Redlining to Roadways</h3>
+              <p>How past decisions shaped today's streets.</p>
+            </article>
+          </div>
+          <p class="swipe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>Swipe to see all five tracks</p>
+          <div class="academy__foot">
+            <a class="btn btn--primary" href="#guide">Join the waitlist</a>
+            <p class="small">Get the free guide and you'll hear first when the Academy opens.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners and gear -->
+      <section class="sec sec--off" id="partners">
+        <div class="wrap">
+          <div class="sec__head">
+            <p class="eyebrow">Partners and gear</p>
+            <h2>Gear and partners I use</h2>
+            <p class="disclose">Some links are affiliate links. I may earn a commission at no extra cost to you. I only share gear I use.</p>
+          </div>
+          <div class="rail rail--prods">
+            <a class="prod" href="https://schoolofpe.com?bg_ref=K30zGEfWUM" target="_blank" rel="noopener sponsored">
+              <span class="prod__media"><img src="schoolofpe.jpg" width="800" height="533" alt="School of PE Study Hub app on a phone" loading="lazy" /></span>
+              <span class="prod__body"><span class="prod__brand">School of PE</span><span class="prod__line">PE exam prep I recommend to engineers studying for their license.</span><span class="code">MRBARRICADE $100 off</span><span class="btn btn--primary">Shop</span></span>
+            </a>
+            <a class="prod" href="https://www.awin1.com/cread.php?awinmid=122512&amp;awinaffid=3117753" target="_blank" rel="noopener sponsored">
+              <span class="prod__media"><img src="sunaofe.jpg" width="800" height="432" alt="Sunaofe standing desk with a walnut top" loading="lazy" /></span>
+              <span class="prod__body"><span class="prod__brand">Sunaofe</span><span class="prod__line">Standing desks for long design days.</span><span class="btn btn--primary">Shop</span></span>
+            </a>
+            <a class="prod" href="https://www.awin1.com/cread.php?awinmid=102431&amp;awinaffid=3117753" target="_blank" rel="noopener sponsored">
+              <span class="prod__media"><img src="emensuits.jpg" width="533" height="800" alt="Navy double breasted suit from eMenSuits" loading="lazy" /></span>
+              <span class="prod__body"><span class="prod__brand">eMenSuits</span><span class="prod__line">Affordable suits for the on camera look.</span><span class="btn btn--primary">Shop</span></span>
+            </a>
+            <a class="prod" href="https://www.awin1.com/cread.php?awinmid=107838&amp;awinaffid=3117753&amp;ued=https%3A%2F%2Fwww.magicshine-us.com%2F" target="_blank" rel="noopener sponsored">
+              <span class="prod__media prod__media--ink" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5h8a2.5 2.5 0 0 1 0 5H3z" /><path d="M11 12h2M15 7.5l5-2M15 12h6M15 16.5l5 2" stroke="#ff9a5c" /></svg></span>
+              <span class="prod__body"><span class="prod__brand">Magicshine</span><span class="prod__line">Bike lights I ride with at night.</span><span class="btn btn--primary">Shop</span></span>
+            </a>
+            <a class="prod" href="https://wildone.com/VIGNESH24220" target="_blank" rel="noopener sponsored">
+              <span class="prod__media"><img src="wildone.jpg" width="640" height="800" alt="Dog wearing a Wild One harness" loading="lazy" /></span>
+              <span class="prod__body"><span class="prod__brand">Wild One</span><span class="prod__line">Dosa's harness and leash.</span><span class="btn btn--primary">Shop</span></span>
+            </a>
+            <a class="prod" href="https://www.maxbone.com/VIGNESH06152" target="_blank" rel="noopener sponsored">
+              <span class="prod__media"><img src="maxbone.jpg" width="533" height="800" alt="maxbone Easy Fit dog harness" loading="lazy" /></span>
+              <span class="prod__body"><span class="prod__brand">maxbone</span><span class="prod__line">More gear for Dosa.</span><span class="code">VIGNESH06152 10% off</span><span class="btn btn--primary">Shop</span></span>
+            </a>
+            <a class="prod" href="https://shopmy.us/shop/mrbarricade" target="_blank" rel="noopener sponsored">
+              <span class="prod__media prod__media--orange" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14l-1 13H6z" /><path d="M9 10V6a3 3 0 0 1 6 0v4" /></svg></span>
+              <span class="prod__body"><span class="prod__brand">My ShopMy shop</span><span class="prod__line">Everything I use in one place.</span><span class="btn btn--primary">Shop</span></span>
+            </a>
+          </div>
+          <p class="swipe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>Swipe for more gear</p>
+        </div>
+      </section>
+
+      <!-- 6. Brands & Speaking -->
+      <section class="sec" id="brands">
+        <div class="wrap">
+          <div class="sec__head">
+            <p class="eyebrow">Brands &amp; speaking</p>
+            <h2>Partner with Mr. Barricade.</h2>
+          </div>
+          <div class="aud" aria-label="Audience">
+            <div><b>1.6M</b><span>TikTok followers</span></div>
+            <div><b>1.5M</b><span>views in the last 60 days</span></div>
+            <div><b>78.7K</b><span>profile views in 60 days</span></div>
+            <div><b>63% men</b><span>37% women</span></div>
+          </div>
+          <div class="duo">
+            <article class="card">
+              <p class="eyebrow">Brand partnerships</p>
+              <p class="bigline">1.6M TikTok followers. 1.5M video views in the last 60 days.</p>
+              <p class="muted">Sponsored videos, integrations and product reviews. Brand fit: mobility, bikes and e-bikes, outdoor, tools, education, menswear.</p>
+              <a class="btn btn--primary" href="https://hark.site/s/4662bb63-c32c-4ae3-8c97-8a065a693887" target="_blank" rel="noopener">See the media kit</a>
+            </article>
+            <article class="card">
+              <p class="eyebrow">Speaking</p>
+              <p class="bigline">Talks for cities, agencies, universities, conferences and companies.</p>
+              <ul class="talks">
+                <li>Streets Are Designed, Not Destined</li>
+                <li>Infrastructure in 60 Seconds</li>
+                <li>Tunnels, Trains and Bike Lanes</li>
+              </ul>
+              <p class="workshop"><strong>Getting to Yes on Safe Streets:</strong> a half day workshop for advocacy groups.</p>
+              <p class="small"><strong style="color: var(--ink);">Formats:</strong> Keynotes 30 to 45 min, workshops 60 to 90 min, panels, virtual.</p>
+              <a class="btn" href="#contact">Ask about a talk</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Community -->
+      <hr class="stripe" />
+      <section class="sec band band--photo" id="community">
+        <img class="band__bg" src="bike-lane-sunset.jpg" width="1584" height="672" alt="" loading="lazy" />
+        <div class="wrap band__inner">
+          <p class="eyebrow">Discord</p>
+          <h2>Join the community</h2>
+          <p class="lead">Join the Mr. Barricade Community on Discord. Learn how to testify at council, read plans, and win a bike lane, and share your streets with advocates near you.</p>
+          <ul class="ticks">
+            <li>Ask an engineer your street questions</li>
+            <li>Learn to testify and read plans</li>
+            <li>Meet advocates near you</li>
+          </ul>
+          <div class="btns">
+            <a class="btn btn--primary" href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener">Join on Discord</a>
+          </div>
+        </div>
+      </section>
+      <hr class="stripe" />
+
+      <!-- 8. About -->
+      <section class="sec" id="about">
+        <div class="wrap about">
+          <div class="about__side">
+            <div class="sec__head" style="margin-bottom: 0;">
+              <p class="eyebrow">About</p>
+              <h2>About Vignesh</h2>
+            </div>
+            <a class="tv" href="https://www.youtube.com/watch?v=CD2vtXZtVTM" target="_blank" rel="noopener">
+              <span class="vid__media"><img src="video-tv-interview.jpg" width="480" height="270" alt="Vignesh being interviewed on a street corner in a suit" loading="lazy" /><span class="vid__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z" /></svg></span></span>
+              <span class="tv__cap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg>Watch: How I became a TikToker</span>
+            </a>
+          </div>
+          <div class="prose">
+            <p>Vignesh Swaminathan, PE, is a licensed civil engineer working on protected bike lanes and safer streets, known online as Mr. Barricade. He has 11 years of experience in active transportation and highway design.</p>
+            <p>He previously founded a transportation design firm and has designed and delivered more than 100 protected corners in California with local governments, agencies and Caltrans. He took a leading role in writing NACTO's Don't Give Up at the Intersection design guide.</p>
+            <p>He was Lead Engineer on tunnel projects for The Boring Company in Las Vegas, operating tunnel boring machines and designing stations and alignments.</p>
+            <p>Today he reaches 1.6M people as @mrbarricade, explaining how streets get designed and how you can change yours.</p>
+            <ul class="hl" aria-label="Highlights">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6" /><path d="M8.5 14L7 22l5-3 5 3-1.5-8" /></svg>Licensed civil engineer (PE)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10a6 6 0 0 1 6-6h10" /><path d="M9 20v-8a3 3 0 0 1 3-3h8" /></svg>100+ protected corners in California</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20v-6a9 9 0 0 1 18 0v6z" /><path d="M8 20v-5a4 4 0 0 1 8 0v5" /></svg>Lead Engineer, The Boring Company tunnels in Las Vegas</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15" /><path d="M5 19l7-7" /></svg>Former chair, Cupertino Sustainability Commission</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="15" rx="3" /><path d="M4 11h16M8 21l1.5-3M16 21l-1.5-3" /><circle cx="8.5" cy="14.5" r=".8" fill="currentColor" /><circle cx="15.5" cy="14.5" r=".8" fill="currentColor" /></svg>Former VTA citizens advisory committee member</li>
+            </ul>
+            <p class="press">Featured in Mercury News, SFGate and MEL. Podcast guest on Strong Towns, The War on Cars and Active Towns.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Final call to action -->
+      <section class="sec" aria-label="Get started" style="padding-bottom: 0;">
+        <div class="wrap">
+          <div class="cta">
+            <div style="display: grid; gap: 12px;">
+              <h2>Ready to change your street?</h2>
+              <p>Start with the free guide, or talk it through with an engineer.</p>
+            </div>
+            <div class="btns">
+              <a class="btn btn--primary" href="#guide">Get the free guide</a>
+              <!-- BOOKING LINK -->
+              <a class="btn btn--light" href="https://cal.com/vignesh-swaminathan-mhskn0/consult" target="_blank" rel="noopener">Book a consult</a>
+              <!-- /BOOKING LINK -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Contact -->
+      <section class="sec" id="contact">
+        <div class="wrap contact">
+          <div class="sec__head" style="margin-bottom: 0; align-content: start;">
+            <p class="eyebrow">Contact</p>
+            <h2>Get in touch</h2>
+            <p class="lead">Brand partnerships, speaking, consultations or anything else. Send a note and I'll reply.</p>
+          </div>
+          <div class="card">
+            <!-- CONTACT FORM: replace action and handler when the form service is wired -->
+            <form class="form js-form" id="contact-form" action="#" method="post" novalidate>
+              <div class="form__row">
+                <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+                <label>Email<input type="email" name="email" autocomplete="email" inputmode="email" required /></label>
+              </div>
+              <label>What's this about?
+                <select name="topic" required>
+                  <option>Brand partnership</option>
+                  <option>Speaking</option>
+                  <option>Consultation</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>Message<textarea name="message" required></textarea></label>
+              <button class="btn btn--primary" type="submit">Send</button>
+              <p class="form-error" role="alert">Please add your name, a valid email and a message.</p>
+              <p class="success" role="status" aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M7.5 12.5l3 3 6-6.5" /></svg><span>Thanks. I'll get back to you soon.</span></p>
+            </form>
+            <!-- /CONTACT FORM -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="sbar" id="sbar" aria-label="Quick actions">
+      <a class="btn" href="#guide">Free guide</a>
+      <!-- BOOKING LINK -->
+      <a class="btn btn--primary" href="https://cal.com/vignesh-swaminathan-mhskn0/consult" target="_blank" rel="noopener">Book $80 consult</a>
+      <!-- /BOOKING LINK -->
+    </div>
+
+    <!-- 11. Footer -->
+    <footer class="foot">
+      <div class="wrap">
+        <div class="foot__top">
+          <a class="brand" href="#top">
+            <span class="logo"><img src="logo.png" alt="" width="1408" height="768" /></span>
+            <span>Mr. Barricade · Vignesh Swaminathan, PE</span>
+          </a>
+          <ul class="socials" aria-label="Social links">
+            <li><a href="https://www.tiktok.com/@mrbarricade" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.7z" /></svg></a></li>
+            <li><a href="https://www.instagram.com/mrbarricade" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></a></li>
+            <li><a href="https://www.youtube.com/@mrbarricade" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z" /></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/mrbarricade" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5 1 1.8 2 3.8 2 4 0 4.8 2.6 4.8 6V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.7 1.4-2.7 2.8V21h-4z" transform="translate(0 -1.5)" /></svg></a></li>
+            <li><a href="https://x.com/viggyswam" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z" /></svg></a></li>
+            <li><a href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 5.3A17 17 0 0 0 15.3 4l-.5 1.1a15.7 15.7 0 0 0-5.6 0L8.7 4a17 17 0 0 0-4.2 1.3C1.8 9.3 1.1 13.2 1.4 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.2 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8a17 17 0 0 0 5.2-2.6c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1zm7 0c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1z" /></svg></a></li>
+          </ul>
+        </div>
+        <div class="foot__bottom">
+          <p>Views are my own and don't represent Kimley-Horn.</p>
+          <p>© 2026 Mr. Barricade</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var nav = document.getElementById("nav");
+        var burger = nav.querySelector(".burger");
+        function setOpen(open) {
+          nav.classList.toggle("is-open", open);
+          burger.setAttribute("aria-expanded", open ? "true" : "false");
+          burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+        burger.addEventListener("click", function () { setOpen(!nav.classList.contains("is-open")); });
+        nav.querySelectorAll(".menu a").forEach(function (a) { a.addEventListener("click", function () { setOpen(false); }); });
+        document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+        window.addEventListener("resize", function () { if (window.innerWidth >= 1120) setOpen(false); });
+
+        var bar = document.getElementById("sbar");
+        var hero = document.querySelector(".hero");
+        var guideCard = document.getElementById("guide-card");
+        var pastHero = false, guideIn = false;
+        function updateBar() {
+          var show = pastHero && !guideIn;
+          bar.classList.toggle("is-shown", show);
+          bar.setAttribute("aria-hidden", show ? "false" : "true");
+        }
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.target === hero) pastHero = !e.isIntersecting && e.boundingClientRect.top < 0;
+              else guideIn = e.isIntersecting;
+            });
+            updateBar();
+          }).observe(hero);
+          var io2 = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { guideIn = e.isIntersecting; });
+            updateBar();
+          });
+          io2.observe(guideCard);
+        }
+        updateBar();
+
+        var forms = {
+          "guide-form": {
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSf3aWgUYRv2OpfNT61BFhH0sWKquQ1fuVOb5aeAvNeDbyW91g/formResponse",
+            fields: function (f) {
+              return {
+                "entry.685289002": f.elements.first_name.value.trim(),
+                "entry.199991278": f.elements.email.value.trim()
+              };
+            },
+            done: function (f) {
+              var panel = document.getElementById("guide-done");
+              f.hidden = true;
+              f.style.display = "none";
+              panel.hidden = false;
+              panel.focus();
+            }
+          },
+          "contact-form": {
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSeE8lzAs2vYxBly1NjcuQRRRJspB2VwKx0GwA8pqmxjdYO8jw/formResponse",
+            fields: function (f) {
+              var sel = f.elements.topic;
+              return {
+                "entry.1644479795": f.elements.name.value.trim(),
+                "entry.774975069": f.elements.email.value.trim(),
+                "entry.526785503": sel.options[sel.selectedIndex].text,
+                "entry.999926619": f.elements.message.value.trim()
+              };
+            },
+            done: function (f) {
+              f.querySelector(".success").classList.add("is-shown");
+              f.querySelectorAll("input, textarea").forEach(function (el) { el.value = ""; });
+            }
+          }
+        };
+
+        document.querySelectorAll(".js-form").forEach(function (form) {
+          var cfg = forms[form.id];
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var ok = form.querySelector(".success");
+            var err = form.querySelector(".form-error");
+            var btn = form.querySelector('button[type="submit"]');
+            if (btn.disabled) return;
+            if (!form.checkValidity()) {
+              ok.classList.remove("is-shown");
+              err.classList.add("is-shown");
+              var bad = form.querySelector(":invalid");
+              if (bad) bad.focus();
+              return;
+            }
+            err.classList.remove("is-shown");
+            ok.classList.remove("is-shown");
+            var label = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = "Sending...";
+            function finish() {
+              btn.disabled = false;
+              btn.textContent = label;
+              cfg.done(form);
+            }
+            fetch(cfg.url, { method: "POST", mode: "no-cors", body: new URLSearchParams(cfg.fields(form)) })
+              .then(finish, finish);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
