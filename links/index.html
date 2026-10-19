@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mr. Barricade | Links</title>
+    <meta
+      name="description"
+      content="Vignesh Swaminathan, PE. Free street guide, 1-1 consults, the Discord community, videos, codes and gear."
+    />
+    <meta property="og:title" content="Mr. Barricade | Links" />
+    <meta
+      property="og:description"
+      content="I explain how streets get designed and how to change yours."
+    />
+    <meta property="og:image" content="vignesh-bike-lane.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mr. Barricade | Links" />
+    <meta name="twitter:image" content="vignesh-bike-lane.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      /* Link-in-bio: his brand's charcoal/orange/white on one narrow column. */
+      .x-root {
+        --ink: #2f3437;
+        --orange: #f26a1b;
+        --orange-dark: #d9560c;
+        --orange-soft: #ff9a5c;
+        --white: #ffffff;
+        --card: #3a4144;
+        --card-hi: #454c50;
+        --edge: rgba(255, 255, 255, 0.14);
+        --dim: #c3c9cb;
+      }
+      html,
+      body {
+        background: #2f3437;
+      }
+      body {
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #fff;
+      }
+      .x-root {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 20px 18px 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+      }
+      html {
+        overflow-x: clip;
+      }
+      .x-root > *,
+      .x-stack > * {
+        min-width: 0;
+      }
+      .x-root a {
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .x-root :focus-visible {
+        outline: 3px solid var(--orange-soft);
+        outline-offset: 3px;
+      }
+      .x-up {
+        animation: x-up var(--dur-draw, 0.5s) var(--ease-out, cubic-bezier(0.2, 0.7, 0.2, 1)) both;
+        animation-delay: var(--d, 0s);
+      }
+      @keyframes x-up {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .x-up {
+          animation: none;
+        }
+      }
+
+      /* profile */
+      .x-logo {
+        width: 76px;
+        margin: 0 auto;
+      }
+      .x-profile {
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        text-align: center;
+      }
+      .x-avatar {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 28% 22%;
+        border: 3px solid var(--orange);
+      }
+      .x-name {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        margin-top: 4px;
+      }
+      .x-cred {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--orange-soft);
+      }
+      .x-bio {
+        font-size: 15px;
+        color: var(--dim);
+        max-width: 22em;
+      }
+      .x-socials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 4px;
+      }
+      .x-socials a {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        border: 1px solid var(--edge);
+        transition: background var(--dur-quick, 0.15s), transform var(--dur-quick, 0.15s);
+      }
+      .x-socials a:hover {
+        background: var(--card-hi);
+      }
+      .x-socials a:active {
+        transform: scale(0.94);
+      }
+
+      /* hero action */
+      .x-hero {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        align-items: center;
+        background: var(--orange);
+        color: var(--white);
+        border-radius: 20px;
+        padding: 14px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+        transition: background var(--dur-quick, 0.15s), transform var(--dur-quick, 0.15s);
+      }
+      .x-hero:hover {
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.38);
+      }
+      .x-hero .x-kicker,
+      .x-hero p {
+        color: #1c1f21;
+      }
+      .x-hero:active {
+        transform: translateY(2px);
+      }
+      .x-hero img {
+        width: 100%;
+        border-radius: 12px;
+        background: #fff;
+      }
+      .x-kicker {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.9;
+      }
+      .x-hero h2 {
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 1.15;
+        margin: 4px 0 5px;
+      }
+      .x-hero p {
+        font-size: 13.5px;
+        line-height: 1.35;
+      }
+
+      /* strong buttons */
+      .x-stack {
+        display: grid;
+        gap: 10px;
+      }
+      .x-big {
+        display: grid;
+        grid-template-columns: 40px 1fr 14px;
+        align-items: center;
+        gap: 12px;
+        min-height: 68px;
+        padding: 13px 16px;
+        border-radius: 16px;
+        background: var(--card);
+        border: 1px solid var(--edge);
+        color: var(--white);
+        transition: background var(--dur-quick, 0.15s), transform var(--dur-quick, 0.15s);
+      }
+      .x-big:hover {
+        background: var(--card-hi);
+      }
+      .x-big:active {
+        transform: translateY(2px);
+      }
+      .x-ico {
+        width: 40px;
+        height: 40px;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        background: rgba(242, 106, 27, 0.18);
+        color: var(--orange-soft);
+      }
+      .x-big b {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .x-big span {
+        display: block;
+        font-size: 13px;
+        line-height: 1.35;
+        color: var(--dim);
+        margin-top: 2px;
+      }
+      .x-arrow {
+        width: 9px;
+        height: 9px;
+        border-top: 2.5px solid var(--orange);
+        border-right: 2.5px solid var(--orange);
+        transform: rotate(45deg);
+        justify-self: end;
+      }
+
+      /* section heads */
+      .x-h {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .x-h h2 {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--white);
+      }
+      .x-h span {
+        font-size: 12px;
+        color: var(--dim);
+      }
+
+      /* videos */
+      .x-reel {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 140px;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 6px;
+        margin-inline: -18px;
+        padding-inline: 18px;
+        scrollbar-width: none;
+      }
+      .x-reel::-webkit-scrollbar {
+        display: none;
+      }
+      .x-vid {
+        scroll-snap-align: start;
+        color: var(--white);
+        display: block;
+      }
+      .x-vid figure {
+        position: relative;
+        margin: 0;
+      }
+      .x-vid img {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 1px solid var(--edge);
+      }
+      .x-play {
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--orange);
+        display: grid;
+        place-items: center;
+      }
+      .x-vid p {
+        font-size: 13px;
+        line-height: 1.3;
+        font-weight: 600;
+        margin-top: 8px;
+      }
+      .x-vid:active {
+        transform: translateY(2px);
+      }
+
+      /* codes and gear */
+      .x-row {
+        position: relative;
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr) auto 14px;
+        align-items: center;
+        gap: 12px;
+        min-height: 64px;
+        padding: 10px 14px;
+        border-radius: 14px;
+        background: var(--card);
+        border: 1px solid var(--edge);
+        transition: background var(--dur-quick, 0.15s);
+      }
+      .x-row:hover {
+        background: var(--card-hi);
+      }
+      .x-row img {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .x-row .x-ico {
+        width: 44px;
+        height: 44px;
+      }
+      .x-row b {
+        display: block;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--white);
+      }
+      .x-row span {
+        display: block;
+        font-size: 12.5px;
+        color: var(--dim);
+        margin-top: 1px;
+      }
+      .x-row a.x-cover {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+      }
+      .x-row a.x-cover + span {
+        margin-top: -12px;
+      }
+      .x-row a.x-cover::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 14px;
+      }
+      .x-row:active {
+        transform: translateY(1px);
+      }
+      .x-copy {
+        position: relative;
+        z-index: 1;
+        min-height: 44px;
+        padding: 0 12px;
+        border-radius: 999px;
+        border: 1px dashed var(--orange-soft);
+        background: #2a2e31;
+        color: var(--orange-soft);
+        font: inherit;
+        font-size: 12.5px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .x-copy:active {
+        transform: scale(0.96);
+      }
+      .x-copy.is-copied {
+        background: var(--orange);
+        border-style: solid;
+        border-color: var(--orange);
+        color: #1c1f21;
+      }
+      .x-note {
+        font-size: 12px;
+        color: var(--dim);
+        margin-top: 10px;
+      }
+
+      /* brands, details, footer */
+      .x-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .x-mini {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        min-height: 52px;
+        padding: 10px 12px;
+        border-radius: 999px;
+        border: 1.5px solid var(--white);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 700;
+        transition: background var(--dur-quick, 0.15s), color var(--dur-quick, 0.15s);
+      }
+      .x-mini:hover {
+        background: var(--white);
+        color: var(--ink);
+      }
+      .x-mini:active {
+        transform: translateY(2px);
+      }
+      .x-why {
+        border: 1px solid var(--edge);
+        border-radius: 14px;
+        background: var(--card);
+        padding: 2px 16px;
+      }
+      .x-why summary {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        list-style: none;
+      }
+      .x-why summary::-webkit-details-marker {
+        display: none;
+      }
+      .x-why summary::after {
+        content: "+";
+        margin-left: auto;
+        color: var(--orange);
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .x-why[open] summary::after {
+        content: "\2212";
+      }
+      .x-why p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--dim);
+        padding-bottom: 14px;
+      }
+      .x-foot {
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        text-align: center;
+        font-size: 12.5px;
+        color: var(--dim);
+        padding-top: 4px;
+      }
+      .x-foot a.x-full {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 14px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        border-bottom: 2px solid var(--orange);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="x-root">
+      <img class="x-logo x-up" src="logo.png" alt="Mr. Barricade logo" width="76" />
+
+      <section class="x-profile x-up" style="--d: 0.04s">
+        <img class="x-avatar" src="vignesh-bike-lane.jpg" alt="Vignesh Swaminathan in a suit beside his bike" />
+        <p class="x-name">Mr. Barricade</p>
+        <p class="x-cred">Vignesh Swaminathan, PE · Licensed civil engineer</p>
+        <p class="x-bio">I explain how streets get designed and how to change yours.</p>
+        <nav class="x-socials" aria-label="Social accounts">
+          <a href="https://www.tiktok.com/@mrbarricade" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.2a3.8 3.8 0 1 1-3.1-3.74" /><path d="M14 3a5.6 5.6 0 0 0 5.4 4.4" /></svg>
+          </a>
+          <a href="https://www.instagram.com/mrbarricade" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" /><circle cx="12" cy="12" r="4.1" /><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" /></svg>
+          </a>
+          <a href="https://www.youtube.com/@mrbarricade" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><rect x="2.4" y="5" width="19.2" height="14" rx="4.4" /><path d="M10.3 9.2l4.9 2.8-4.9 2.8z" fill="currentColor" stroke="none" /></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mrbarricade" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="3.6" /><path d="M7.4 10.6v6.1" /><circle cx="7.4" cy="7.6" r="0.9" fill="currentColor" stroke="none" /><path d="M11.4 16.7v-6.1M11.4 13.3c0-1.6 1-2.7 2.5-2.7s2.6 1 2.6 2.9v3.2" /></svg>
+          </a>
+          <a href="https://x.com/viggyswam" target="_blank" rel="noopener" aria-label="X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4.5 4.5l15 15M19.5 4.5l-15 15" /></svg>
+          </a>
+          <a href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener" aria-label="Discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M4 18.2V7.6a2.4 2.4 0 0 1 2.4-2.4h11.2A2.4 2.4 0 0 1 20 7.6v6.6a2.4 2.4 0 0 1-2.4 2.4H9.2z" /><circle cx="9.6" cy="11" r="1.2" fill="currentColor" stroke="none" /><circle cx="14.4" cy="11" r="1.2" fill="currentColor" stroke="none" /></svg>
+          </a>
+        </nav>
+      </section>
+
+      <a class="x-hero x-up" href="/guide" style="--d: 0.08s">
+        <img src="pr01.png" alt="Cover of the guide How to Change Your Street" />
+        <div>
+          <p class="x-kicker">Free guide</p>
+          <h2>How to Change Your Street</h2>
+          <p>16 pages. Public meetings, comments and 311.</p>
+        </div>
+      </a>
+
+      <section class="x-stack x-up" style="--d: 0.12s" aria-label="Work with me">
+        <a class="x-big" href="https://cal.com/vignesh-swaminathan-mhskn0/consult" target="_blank" rel="noopener">
+          <span class="x-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="13" height="13" rx="3" /><path d="M16 11l5-3v8l-5-3z" /></svg></span>
+          <span><b>Book a 1-1 consult · $80</b><span>1 hour video call. Education and mentorship.</span></span>
+          <span class="x-arrow" aria-hidden="true"></span>
+        </a>
+        <a class="x-big" href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener">
+          <span class="x-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3" /><circle cx="16.5" cy="10" r="2.3" /><path d="M3.5 18.5c0-3 2.5-4.6 5.5-4.6s5.5 1.6 5.5 4.6" /><path d="M16.5 14.4c2.3.2 4 1.6 4 4.1" /></svg></span>
+          <span><b>Join the Discord community</b><span>Ask an engineer. Meet advocates near you.</span></span>
+          <span class="x-arrow" aria-hidden="true"></span>
+        </a>
+        <a class="x-big" href="/#contact">
+          <span class="x-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s6.5-6 6.5-10.3A6.5 6.5 0 0 0 5.5 10.7C5.5 15 12 21 12 21z" /><circle cx="12" cy="10.5" r="2.3" /></svg></span>
+          <span><b>Send me your street</b><span>Got a dangerous intersection? Tell me about it. It might be my next video.</span></span>
+          <span class="x-arrow" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <section class="x-up" style="--d: 0.16s" aria-label="Latest videos">
+        <div class="x-h"><h2>Latest videos</h2><span>Swipe</span></div>
+        <div class="x-reel">
+          <a class="x-vid" href="https://www.youtube.com/watch?v=GYD6Re1rzmA" target="_blank" rel="noopener">
+            <figure>
+              <img src="v-GYD6Re1rzmA.jpg" alt="Video thumbnail: riding the bus" />
+              <span class="x-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.2l6 3.8-6 3.8z" fill="#fff" /></svg></span>
+            </figure>
+            <p>I wanna ride the bus with somebody</p>
+          </a>
+          <a class="x-vid" href="https://www.youtube.com/watch?v=PSoXYP34E9o" target="_blank" rel="noopener">
+            <figure>
+              <img src="v-PSoXYP34E9o.jpg" alt="Video thumbnail: rapid bus transit in San Francisco" />
+              <span class="x-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.2l6 3.8-6 3.8z" fill="#fff" /></svg></span>
+            </figure>
+            <p>New rapid bus transit in San Francisco</p>
+          </a>
+          <a class="x-vid" href="https://www.youtube.com/watch?v=h6go47LUC34" target="_blank" rel="noopener">
+            <figure>
+              <img src="v-h6go47LUC34.jpg" alt="Video thumbnail: bus and bike lane solution" />
+              <span class="x-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.2l6 3.8-6 3.8z" fill="#fff" /></svg></span>
+            </figure>
+            <p>Bus and bike lane solution</p>
+          </a>
+          <a class="x-vid" href="https://www.youtube.com/watch?v=rLO6Cd2Fhbg" target="_blank" rel="noopener">
+            <figure>
+              <img src="v-rLO6Cd2Fhbg.jpg" alt="Video thumbnail: protected intersection" />
+              <span class="x-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.2l6 3.8-6 3.8z" fill="#fff" /></svg></span>
+            </figure>
+            <p>Protected intersection best practices</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="x-up" style="--d: 0.2s" aria-label="Codes and gear I use">
+        <div class="x-h"><h2>Codes and gear I use</h2><span>Tap a code to copy</span></div>
+        <div class="x-stack">
+          <div class="x-row">
+            <img src="schoolofpe.jpg" alt="School of PE" />
+            <span><a class="x-cover" href="https://schoolofpe.com?bg_ref=K30zGEfWUM" target="_blank" rel="noopener"><b>School of PE</b></a><span>PE exam prep · $100 off</span></span>
+            <button class="x-copy" type="button" data-copy="MRBARRICADE">MRBARRICADE</button>
+            <span class="x-arrow" aria-hidden="true"></span>
+          </div>
+          <div class="x-row">
+            <img src="maxbone.jpg" alt="maxbone" />
+            <span><a class="x-cover" href="https://www.maxbone.com/VIGNESH06152" target="_blank" rel="noopener"><b>maxbone</b></a><span>Dosa's gear · 10% off</span></span>
+            <button class="x-copy" type="button" data-copy="VIGNESH06152">VIGNESH06152</button>
+            <span class="x-arrow" aria-hidden="true"></span>
+          </div>
+          <div class="x-row">
+            <img src="wildone.jpg" alt="Wild One" />
+            <span><a class="x-cover" href="https://wildone.com/VIGNESH24220" target="_blank" rel="noopener"><b>Wild One</b></a><span>Dosa's harness</span></span>
+            <span></span>
+            <span class="x-arrow" aria-hidden="true"></span>
+          </div>
+          <div class="x-row">
+            <img src="sunaofe.jpg" alt="Sunaofe standing desk" />
+            <span><a class="x-cover" href="https://www.awin1.com/cread.php?awinmid=122512&awinaffid=3117753" target="_blank" rel="noopener"><b>Sunaofe</b></a><span>Standing desk</span></span>
+            <span></span>
+            <span class="x-arrow" aria-hidden="true"></span>
+          </div>
+          <div class="x-row">
+            <img src="emensuits.jpg" alt="eMenSuits" />
+            <span><a class="x-cover" href="https://www.awin1.com/cread.php?awinmid=102431&awinaffid=3117753" target="_blank" rel="noopener"><b>eMenSuits</b></a><span>Suits</span></span>
+            <span></span>
+            <span class="x-arrow" aria-hidden="true"></span>
+          </div>
+          <div class="x-row">
+            <span class="x-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7" /></svg></span>
+            <span><a class="x-cover" href="https://www.awin1.com/cread.php?awinmid=107838&awinaffid=3117753&ued=https%3A%2F%2Fwww.magicshine-us.com%2F" target="_blank" rel="noopener"><b>Magicshine</b></a><span>Bike lights</span></span>
+            <span></span>
+            <span class="x-arrow" aria-hidden="true"></span>
+          </div>
+          <div class="x-row">
+            <span class="x-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8h15l-1.2 11.2a1.8 1.8 0 0 1-1.8 1.6H7.5a1.8 1.8 0 0 1-1.8-1.6z" /><path d="M8.8 8V6.6a3.2 3.2 0 0 1 6.4 0V8" /></svg></span>
+            <span><a class="x-cover" href="https://shopmy.us/shop/mrbarricade" target="_blank" rel="noopener"><b>Everything I use</b></a><span>My ShopMy shop</span></span>
+            <span></span>
+            <span class="x-arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="x-note">Some links are affiliate links. I may earn a commission at no extra cost to you.</p>
+      </section>
+
+      <section class="x-up" style="--d: 0.24s" aria-label="For brands and organizers">
+        <div class="x-h"><h2>For brands and organizers</h2></div>
+        <div class="x-two">
+          <a class="x-mini" href="https://hark.site/s/4662bb63-c32c-4ae3-8c97-8a065a693887" target="_blank" rel="noopener">Media kit</a>
+          <a class="x-mini" href="/#brands">Speaking and workshops</a>
+        </div>
+      </section>
+
+      <footer class="x-foot x-up" style="--d: 0.32s">
+        <a class="x-full" href="/">Full site</a>
+        <p>Views are my own and don't represent Kimley-Horn.</p>
+        <p>© 2026 Mr. Barricade</p>
+      </footer>
+    </div>
+    <script>
+      document.addEventListener("click", function (e) {
+        var btn = e.target.closest(".x-copy");
+        if (!btn) return;
+        var code = btn.getAttribute("data-copy");
+        var done = function () {
+          btn.classList.add("is-copied");
+          btn.textContent = "Copied";
+          setTimeout(function () {
+            btn.classList.remove("is-copied");
+            btn.textContent = code;
+          }, 1600);
+        };
+        clearTimeout(btn._t);
+        btn.classList.add("is-copied");
+        btn.textContent = "Copied";
+        btn._t = setTimeout(function () {
+          btn.classList.remove("is-copied");
+          btn.textContent = code;
+        }, 1600);
+        done = function () {};
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).catch(function () {});
+        } else {
+          var t = document.createElement("textarea");
+          t.value = code;
+          document.body.appendChild(t);
+          t.select();
+          try { document.execCommand("copy"); } catch (err) {}
+          document.body.removeChild(t);
+          done();
+        }
+      });
+    </script>
+    <script src="hark.js"></script>
+  </body>
+</html>
