@@ -388,6 +388,42 @@
       @media (min-width: 880px) { .sbar { display: none; } }
       @media (max-width: 879px) { .foot { padding-bottom: 112px; } }
 
+      /* On the ground mosaic */
+      .sec--compact { padding: 56px 0; }
+      .sec--compact .sec__head { margin-bottom: 24px; }
+      @media (min-width: 880px) { .sec--compact { padding: 80px 0; } }
+      .shot { margin: 0; width: 80vw; max-width: 340px; border-radius: var(--r); overflow: hidden; background: var(--off); border: 1px solid var(--line); box-shadow: var(--shadow); }
+      .shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+      .shot figcaption { padding: 12px 16px; font-size: 15px; font-weight: 700; }
+      @media (min-width: 880px) {
+        .rail--shots { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .shot { width: auto; max-width: none; }
+      }
+
+      /* Work side image */
+      .who { display: grid; gap: 20px; }
+      .who__img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--r-s); }
+      @media (min-width: 640px) { .who { grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; } .who__img { aspect-ratio: 4 / 5; } }
+      @media (min-width: 880px) and (max-width: 1099px) { .who { grid-template-columns: 1fr; } .who__img { aspect-ratio: 16 / 10; } }
+
+      /* Academy photo header */
+      .ahead { position: relative; overflow: hidden; border-radius: var(--r); padding: 36px 24px; margin-bottom: 36px; background: var(--ink); color: var(--white); }
+      .ahead__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .ahead::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(36,40,43,.82) 0%, rgba(36,40,43,.9) 100%); }
+      .ahead .sec__head { position: relative; z-index: 2; margin-bottom: 0; }
+      .ahead .eyebrow { color: var(--orange-on-dark); }
+      .ahead .lead { color: #e3e6e8; }
+      @media (min-width: 880px) { .ahead { padding: 64px 56px; } .ahead::before { background: linear-gradient(90deg, rgba(36,40,43,.94) 0%, rgba(36,40,43,.82) 60%, rgba(36,40,43,.6) 100%); } }
+
+      /* CTA photo */
+      .cta__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .cta--photo::after { content: ""; position: absolute; inset: 0; z-index: 1; background: rgba(36,40,43,.84); }
+      .cta--photo > :not(.cta__bg) { position: relative; z-index: 2; }
+      .cta--photo::before { z-index: 3; }
+      .cta--photo p { color: #e3e6e8; }
+
+      .foot__why { font-size: 14px; color: #d3d7d9; }
+
       .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
       @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
     </style>
@@ -470,6 +506,25 @@
         </div>
       </section>
 
+      <!-- On the ground -->
+      <section class="sec sec--compact" aria-labelledby="ground-title">
+        <div class="wrap">
+          <div class="sec__head">
+            <p class="eyebrow">On the ground</p>
+            <h2 id="ground-title">Real streets, real projects</h2>
+            <p class="lead">Green bike boxes, protected crossings and safer intersections, photographed in the field.</p>
+          </div>
+          <div class="rail rail--shots">
+            <figure class="shot"><img src="field-intersection.jpg" width="1600" height="720" alt="Intersection with a green bike lane and crosswalks" loading="lazy" /><figcaption>Protected intersection</figcaption></figure>
+            <figure class="shot"><img src="field-green-crossing.jpg" width="1600" height="720" alt="Green protected bike crossing" loading="lazy" /><figcaption>Green bike crossing</figcaption></figure>
+            <figure class="shot"><img src="field-construction.jpg" width="1600" height="720" alt="Crew installing a crosswalk and green bike lane behind cones" loading="lazy" /><figcaption>Going in</figcaption></figure>
+            <figure class="shot"><img src="field-bike-box.jpg" width="1600" height="720" alt="Green bike box at a stop line" loading="lazy" /><figcaption>Bike box</figcaption></figure>
+          </div>
+          <p class="swipe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>Swipe for more photos</p>
+        </div>
+      </section>
+      <hr class="stripe" />
+
       <!-- Watch -->
       <section class="sec" id="watch">
         <div class="wrap">
@@ -524,7 +579,7 @@
               <h2>How to Change Your Street</h2>
               <p class="lead">A free guide to public meetings, public comment, transportation and planning commissions, and 311. Written by a traffic engineer who has sat on both sides of the dais.</p>
             </div>
-            <img class="guide__img" src="pr01.png" width="1456" height="935" alt="Preview of the guide How to Change Your Street: the cover and first page" />
+            <img class="guide__img" src="pr01.png" width="1456" height="935" alt="Preview of the guide How to Change Your Street: the cover and first page" loading="lazy" />
           </div>
           <div class="card" id="guide-card" style="display: grid; gap: 22px;">
             <h3>Inside you'll learn</h3>
@@ -548,7 +603,7 @@
             <div class="guide-done" id="guide-done" role="status" aria-live="polite" tabindex="-1" hidden>
               <h3>You're in.</h3>
               <p>Your guide is ready. Download it now, and save it for your next council meeting.</p>
-              <a class="btn btn--primary btn--big" href="https://drive.google.com/uc?export=download&amp;id=1Z0_qCJo4xjMLDQnnbwgj3I7-0XUT6a5B" target="_blank" rel="noopener">Download the guide (PDF)</a>
+              <a class="btn btn--primary btn--big" href="/guide.pdf" target="_blank" rel="noopener" download>Download the guide (PDF)</a>
               <a class="guide-done__link" href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener">Join the community on Discord</a>
             </div>
             <!-- /EMAIL PROVIDER FORM -->
@@ -566,14 +621,19 @@
           </div>
           <div class="work">
             <div class="card" style="display: grid; gap: 20px;">
-              <h3>Who it's for</h3>
-              <ul class="ticks">
-                <li>City and regional planners looking for design insight.</li>
-                <li>Civil engineers seeking design review or mentorship.</li>
-                <li>Startups building transportation and mobility tech.</li>
-                <li>Community advocacy groups working on a street project.</li>
-                <li>Engineering students and early career professionals.</li>
-              </ul>
+              <div class="who">
+                <div style="display: grid; gap: 20px;">
+                  <h3>Who it's for</h3>
+                  <ul class="ticks">
+                    <li>City and regional planners looking for design insight.</li>
+                    <li>Civil engineers seeking design review or mentorship.</li>
+                    <li>Startups building transportation and mobility tech.</li>
+                    <li>Community advocacy groups working on a street project.</li>
+                    <li>Engineering students and early career professionals.</li>
+                  </ul>
+                </div>
+                <img class="who__img" src="field-cyclist.jpg" width="1600" height="1060" alt="Cyclist riding along a suburban street" loading="lazy" />
+              </div>
               <p class="small">Education and mentorship only. Not engineering services or stamped work.</p>
             </div>
             <div class="price">
@@ -591,11 +651,14 @@
       <!-- 5. Courses -->
       <section class="sec" id="courses">
         <div class="wrap">
-          <div class="sec__head">
-            <span class="tag">Launching soon</span>
-            <p class="eyebrow">Courses</p>
-            <h2>Street Advocate Academy</h2>
-            <p class="lead">Self-paced courses that teach the process and the engineering behind your streets. Launching soon.</p>
+          <div class="ahead">
+            <img class="ahead__bg" src="stock-capitol-sunrise.jpg" width="1600" height="1200" alt="" loading="lazy" />
+            <div class="sec__head">
+              <span class="tag">Launching soon</span>
+              <p class="eyebrow">Courses</p>
+              <h2>Street Advocate Academy</h2>
+              <p class="lead">Self-paced courses that teach the process and the engineering behind your streets. Launching soon.</p>
+            </div>
           </div>
           <div class="rail rail--tracks">
             <article class="track track--first">
@@ -778,7 +841,8 @@
       <!-- 9. Final call to action -->
       <section class="sec" aria-label="Get started" style="padding-bottom: 0;">
         <div class="wrap">
-          <div class="cta">
+          <div class="cta cta--photo">
+            <img class="cta__bg" src="stock-red-bike-lane.jpg" width="1600" height="1067" alt="" loading="lazy" />
             <div style="display: grid; gap: 12px;">
               <h2>Ready to change your street?</h2>
               <p>Start with the free guide, or talk it through with an engineer.</p>
@@ -839,7 +903,7 @@
       <div class="wrap">
         <div class="foot__top">
           <a class="brand" href="#top">
-            <span class="logo"><img src="logo.png" alt="" width="1408" height="768" /></span>
+            <span class="logo"><img src="logo.png" alt="" width="1408" height="768" loading="lazy" /></span>
             <span>Mr. Barricade · Vignesh Swaminathan, PE</span>
           </a>
           <ul class="socials" aria-label="Social links">
