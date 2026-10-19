@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Change Your Street | Free guide from Mr. Barricade</title>
+    <meta name="description" content="A traffic engineer's playbook for public meetings, public comment, commissions and 311. Written by someone who has sat on both sides of the dais." />
+    <meta name="theme-color" content="#2F3437" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mr. Barricade" />
+    <meta property="og:title" content="How to Change Your Street | Free guide from Mr. Barricade" />
+    <meta property="og:description" content="A traffic engineer's playbook for public meetings, public comment, commissions and 311. Written by someone who has sat on both sides of the dais." />
+    <meta property="og:url" content="https://mrbarricade511.com/guide" />
+    <meta property="og:image" content="pr01.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Change Your Street | Free guide from Mr. Barricade" />
+    <meta name="twitter:description" content="A traffic engineer's playbook for public meetings, public comment, commissions and 311. Written by someone who has sat on both sides of the dais." />
+    <meta name="twitter:image" content="pr01.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      /* Brand tokens from mrbarricade511.com, mapped onto the library's tokens so every component matches. */
+      :root {
+        color-scheme: light;
+        --x-ink: #2F3437;
+        --x-ink-2: #5b6266;
+        --x-orange: #F26A1B;
+        --x-orange-dark: #d9560c;
+        --x-orange-text: #b04405;
+        --x-orange-tint: #fff1e8;
+        --x-white: #ffffff;
+        --x-off: #f7f5f2;
+        --x-line: #e6e2dc;
+        --x-field: #cfcac3;
+        --x-shadow: 0 1px 2px rgba(47,52,55,.06), 0 8px 28px rgba(47,52,55,.08);
+
+        --sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        --text-primary: var(--x-ink);
+        --text-secondary: var(--x-ink-2);
+        --text-primary-on: var(--x-white);
+        --fill-primary: var(--x-ink);
+        --fill-primary-on: var(--x-white);
+        --fill-tertiary: var(--x-off);
+        --stroke-primary: var(--x-field);
+        --stroke-secondary: var(--x-line);
+        --type-title: 800 clamp(28px, 6vw, 40px)/1.1 var(--sans);
+        --type-heading: 700 19px/1.25 var(--sans);
+        --page-max: 1160px;
+        --gutter: 20px;
+      }
+      body { line-height: 1.5; }
+      .head h2 { letter-spacing: -0.025em; }
+
+      /* Header, as on the main site */
+      .x-header {
+        position: sticky; top: 0; z-index: 50;
+        margin: -12px calc(50% - 50vw) 0;
+        padding-inline: max(var(--gutter), calc(50vw - var(--page-max) / 2 + var(--gutter)));
+        background: rgba(255,255,255,.94);
+        -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px);
+        border-bottom: 1px solid var(--x-line);
+      }
+      .x-header__bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
+      .x-brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; color: var(--x-ink); }
+      .x-logo { width: 48px; height: 32px; overflow: hidden; position: relative; flex: none; }
+      .x-logo img { position: absolute; width: 84px; max-width: none; height: auto; left: -18px; top: -7px; }
+      .x-header__link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; font-size: 14px; font-weight: 600; color: var(--x-ink); text-decoration: underline; text-decoration-color: var(--x-orange); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+      .x-header__link:hover { color: var(--x-orange-dark); }
+
+      /* Hero */
+      .x-hero { display: grid; gap: 22px; align-items: center; padding: 14px 0 28px; }
+      .x-hero__copy { display: grid; gap: 10px; }
+      .x-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--x-orange-text); }
+      .x-hero h1 { font-size: clamp(34px, 9vw, 64px); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; }
+      .x-hero__sub { font-size: 15px; line-height: 1.45; color: var(--x-ink-2); max-width: 52ch; }
+      .x-cover { position: relative; max-width: 560px; }
+      .x-cover img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--x-line); box-shadow: var(--x-shadow); background: var(--x-white); }
+      .x-cover::after {
+        content: ""; position: absolute; left: 20px; right: 20px; bottom: -10px; height: 10px; border-radius: 0 0 8px 8px; z-index: -1;
+        background: repeating-linear-gradient(-45deg, var(--x-orange) 0 12px, var(--x-white) 12px 24px);
+      }
+      @media (min-width: 880px) {
+        .x-hero { grid-template-columns: 1fr 1fr; gap: 56px; padding: 56px 0 64px; }
+        .x-hero__copy { gap: 18px; }
+        .x-hero__sub { font-size: 18px; }
+      }
+
+      /* Signup form and its success state */
+      .x-signup { display: grid; gap: 12px; }
+      .x-form { display: grid; gap: 10px; }
+      .x-form label { display: grid; gap: 4px; font-size: 14px; font-weight: 600; }
+      .x-form input {
+        width: 100%; min-height: 48px; padding: 10px 16px; font: inherit; font-size: 16px; color: var(--x-ink);
+        background: var(--x-white); border: 1.5px solid var(--x-field); border-radius: 12px;
+        transition: border-color .15s ease, box-shadow .15s ease;
+      }
+      .x-form input:focus { outline: none; border-color: var(--x-orange); box-shadow: 0 0 0 4px rgba(242,106,27,.18); }
+      .x-form input[aria-invalid="true"] { border-color: #b3261e; }
+      .x-row { display: grid; gap: 10px; }
+      @media (min-width: 560px) { .x-row { grid-template-columns: 1fr 1fr; } }
+      .x-btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%;
+        min-height: 52px; padding: 0 26px; border-radius: 999px; border: 2px solid var(--x-orange);
+        background: var(--x-orange); color: var(--x-white); font: inherit; font-size: 16px; font-weight: 700;
+        text-decoration: none; cursor: pointer; transition: background .15s ease, border-color .15s ease, transform .15s ease;
+      }
+      .x-btn:hover { background: var(--x-orange-dark); border-color: var(--x-orange-dark); }
+      .x-btn:active { transform: translateY(1px); }
+      .x-btn:disabled { opacity: .7; cursor: wait; }
+      .x-btn--big { min-height: 60px; font-size: 18px; }
+      .x-note { font-size: 13px; color: var(--x-ink-2); text-align: center; }
+      .x-error { padding: 12px 16px; border-radius: 12px; background: #fdecea; border: 1.5px solid #b3261e; color: #8c1d18; font-weight: 600; font-size: 14px; }
+      .x-error[hidden], .x-done[hidden], .x-form[hidden] { display: none; }
+      .x-done { display: grid; gap: 14px; padding: 22px; border-radius: 16px; background: var(--x-orange-tint); border: 1.5px solid var(--x-orange); }
+      .x-done:focus { outline: none; }
+      .x-done h2, .x-done h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+      .x-done__label { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--x-orange-text); margin-top: 4px; }
+      .x-next { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+      .x-next a {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; padding: 12px 16px;
+        border-radius: 12px; background: var(--x-white); border: 1px solid var(--x-line); text-decoration: none;
+        font-weight: 700; line-height: 1.25; transition: border-color .15s ease;
+      }
+      .x-next a:hover { border-color: var(--x-orange); }
+      .x-next small { display: block; font-size: 13px; font-weight: 500; color: var(--x-ink-2); margin-top: 2px; }
+      .x-next a::after { content: ""; flex: none; width: 9px; height: 9px; border-top: 2.5px solid var(--x-orange); border-right: 2.5px solid var(--x-orange); transform: rotate(45deg); margin-right: 4px; }
+      @media (min-width: 880px) {
+        .x-hero .x-signup { padding: 28px; border-radius: 18px; background: var(--x-white); border: 1px solid var(--x-line); box-shadow: var(--x-shadow); }
+      }
+
+      /* Proof strip */
+      .x-proof {
+        margin-inline: calc(50% - 50vw); padding: 16px max(var(--gutter), calc(50vw - var(--page-max) / 2 + var(--gutter)));
+        background: var(--x-off); border-block: 1px solid var(--x-line);
+      }
+      .x-proof ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 36px; margin: 0; padding: 0; list-style: none; text-align: center; font-size: 15px; color: var(--x-ink-2); }
+      .x-proof strong { color: var(--x-ink); font-weight: 700; }
+
+      /* What's inside */
+      .x-inside { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: x; }
+      .x-inside li { counter-increment: x; display: flex; gap: 16px; align-items: baseline; padding: 16px 18px; background: var(--x-off); border-radius: 12px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+      .x-inside li::before { content: "0" counter(x); flex: none; font-size: 14px; font-weight: 800; color: var(--x-orange-dark); }
+      @media (min-width: 880px) { .x-inside { grid-template-columns: 1fr 1fr; } .x-inside li:last-child { grid-column: 1 / -1; } }
+
+      .x-bigline { font-size: clamp(19px, 2.4vw, 24px); font-weight: 700; letter-spacing: -0.015em; line-height: 1.35; max-width: 46ch; }
+      .x-bigline em { font-style: normal; color: var(--x-orange-text); }
+
+      /* Bottom signup */
+      .x-final { display: grid; gap: 24px; padding: 28px 22px; border-radius: 18px; background: var(--x-ink); color: var(--x-white); }
+      .x-final h2 { font-size: clamp(30px, 6vw, 46px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; }
+      .x-final p.x-final__sub { color: #d3d7d9; font-size: 17px; margin-top: 10px; }
+      .x-final .x-note { color: #d3d7d9; }
+      .x-final .x-done { color: var(--x-ink); }
+      @media (min-width: 880px) { .x-final { grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding: 48px; } }
+    </style>
+  </head>
+  <body>
+    <div class="page" id="top">
+      <header class="x-header">
+        <div class="x-header__bar">
+          <a class="x-brand" href="/" aria-label="Mr. Barricade home">
+            <span class="x-logo"><img src="logo.png" alt="" width="600" height="327" /></span>
+            <span>Mr. Barricade</span>
+          </a>
+          <a class="x-header__link" href="https://cal.com/vignesh-swaminathan-mhskn0/consult" target="_blank" rel="noopener">Book a consult</a>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="x-hero" aria-labelledby="guide-title">
+          <div class="x-hero__copy">
+            <p class="x-eyebrow">Free guide · 16 pages</p>
+            <h1 id="guide-title">How to Change Your Street</h1>
+            <p class="x-hero__sub">A traffic engineer's playbook for public meetings, public comment, commissions and 311. Written by someone who has sat on both sides of the dais.</p>
+            <div class="x-signup">
+              <form class="x-form" action="#" method="post" novalidate>
+                <div class="x-row">
+                  <label>First name<input type="text" name="first_name" autocomplete="given-name" required /></label>
+                  <label>Email<input type="email" name="email" autocomplete="email" inputmode="email" required /></label>
+                </div>
+                <button class="x-btn" type="submit">Send me the guide</button>
+                <p class="x-error" role="alert" hidden>Please add your first name and a valid email.</p>
+                <p class="x-note">Free. No spam. Unsubscribe anytime.</p>
+              </form>
+              <div class="x-done" role="status" aria-live="polite" tabindex="-1" hidden>
+                <h2>You're in. Your guide is ready.</h2>
+                <a class="x-btn x-btn--big" href="/guide.pdf" download>Download the guide (PDF)</a>
+                <p class="x-done__label">Next steps</p>
+                <ul class="x-next">
+                  <li><a href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener"><span>Join the community on Discord</span></a></li>
+                  <li><a href="https://www.youtube.com/@mrbarricade" target="_blank" rel="noopener"><span>Watch the videos</span></a></li>
+                  <li><a href="https://cal.com/vignesh-swaminathan-mhskn0/consult" target="_blank" rel="noopener"><span>Book a 1-1 consult, $80</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="x-cover">
+            <img src="pr01.png" width="800" height="514" alt="Preview of the guide How to Change Your Street: the cover and first page" />
+          </div>
+        </section>
+
+        <div class="x-proof">
+          <ul>
+            <li><strong>1.6M followers</strong> on TikTok</li>
+            <li>Featured in <strong>Mercury News, SFGate and MEL</strong></li>
+            <li>Podcast guest on <strong>Strong Towns, The War on Cars and Active Towns</strong></li>
+          </ul>
+        </div>
+
+        <section class="section" id="inside">
+          <div class="head">
+            <p class="head__eyebrow">What's inside</p>
+            <h2>Five things you'll know before your next meeting.</h2>
+          </div>
+          <ol class="x-inside">
+            <li>How public meetings actually work and why they matter.</li>
+            <li>Who does what: city staff, elected officials, and community speakers.</li>
+            <li>How to write a public comment that changes decisions.</li>
+            <li>When to use 311 for a specific hazard.</li>
+            <li>What to do after the meeting.</li>
+          </ol>
+        </section>
+
+        <section class="section" id="why">
+          <div class="head">
+            <p class="head__eyebrow">Why this works</p>
+            <h2>Every street change starts with someone speaking up.</h2>
+          </div>
+          <p class="x-bigline">Every green bike box and protected crossing like these started as a line item someone spoke up for. <em>This guide shows you where your voice counts.</em></p>
+          <div class="pair">
+            <figure class="band">
+              <img src="field-bike-box.jpg" alt="A green bike box painted ahead of the stop line at an intersection" />
+              <figcaption>A green bike box at an intersection</figcaption>
+            </figure>
+            <figure class="band">
+              <img src="field-green-crossing.jpg" alt="A green bike crossing painted through a crosswalk" />
+              <figcaption>A green bike crossing through a crosswalk</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="author">
+          <div class="head">
+            <p class="head__eyebrow">About the author</p>
+            <h2>Written by an engineer who builds these streets.</h2>
+          </div>
+          <div class="pair">
+            <figure class="band">
+              <img src="vignesh-bike-lane.jpg" alt="Vignesh Swaminathan in a suit beside a bike lane" />
+            </figure>
+            <div class="prose">
+              <p class="x-bigline">Vignesh Swaminathan, PE, is a licensed civil engineer known online as Mr. Barricade.</p>
+              <p>He has designed more than 100 protected corners in California and helped write NACTO's <em>Don't Give Up at the Intersection</em> guide.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="faq">
+          <div class="head">
+            <p class="head__eyebrow">FAQ</p>
+            <h2>Quick answers.</h2>
+          </div>
+          <div class="cards">
+            <div>
+              <h3>Is it really free?</h3>
+              <p>Yes.</p>
+            </div>
+            <div>
+              <h3>Who is it for?</h3>
+              <p>Residents, advocates, students and anyone who wants a safer street on their block.</p>
+            </div>
+            <div>
+              <h3>I'm not in California. Does it apply?</h3>
+              <p>Yes. The process is similar in most US cities.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="get">
+          <div class="x-final">
+            <div>
+              <h2>Get the guide</h2>
+              <p class="x-final__sub">16 pages. Free, and in your hands the moment you sign up.</p>
+            </div>
+            <div class="x-signup">
+              <form class="x-form" action="#" method="post" novalidate>
+                <div class="x-row">
+                  <label>First name<input type="text" name="first_name" autocomplete="given-name" required /></label>
+                  <label>Email<input type="email" name="email" autocomplete="email" inputmode="email" required /></label>
+                </div>
+                <button class="x-btn" type="submit">Send me the guide</button>
+                <p class="x-error" role="alert" hidden>Please add your first name and a valid email.</p>
+                <p class="x-note">Free. No spam. Unsubscribe anytime.</p>
+              </form>
+              <div class="x-done" role="status" aria-live="polite" tabindex="-1" hidden>
+                <h3>You're in. Your guide is ready.</h3>
+                <a class="x-btn x-btn--big" href="/guide.pdf" download>Download the guide (PDF)</a>
+                <p class="x-done__label">Next steps</p>
+                <ul class="x-next">
+                  <li><a href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener"><span>Join the community on Discord</span></a></li>
+                  <li><a href="https://www.youtube.com/@mrbarricade" target="_blank" rel="noopener"><span>Watch the videos</span></a></li>
+                  <li><a href="https://cal.com/vignesh-swaminathan-mhskn0/consult" target="_blank" rel="noopener"><span>Book a 1-1 consult, $80</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="foot">
+        <div>
+          <p>Views are my own and don't represent Kimley-Horn.</p>
+          <p>© 2026 Mr. Barricade</p>
+        </div>
+        <nav aria-label="More from Mr. Barricade">
+          <a href="/">Home</a>
+          <a href="/links">Links</a>
+          <a href="https://discord.gg/APGWpw9Kw" target="_blank" rel="noopener">Discord</a>
+        </nav>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      (function () {
+        var URL_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSf3aWgUYRv2OpfNT61BFhH0sWKquQ1fuVOb5aeAvNeDbyW91g/formResponse";
+        var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function showDone(active) {
+          document.querySelectorAll(".x-signup").forEach(function (box) {
+            box.querySelector(".x-form").hidden = true;
+            box.querySelector(".x-done").hidden = false;
+          });
+          var panel = active.querySelector(".x-done");
+          if (panel) panel.focus();
+        }
+
+        document.querySelectorAll(".x-signup").forEach(function (box) {
+          var form = box.querySelector(".x-form");
+          var err = form.querySelector(".x-error");
+          var btn = form.querySelector('button[type="submit"]');
+          var first = form.elements.first_name;
+          var email = form.elements.email;
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (btn.disabled) return;
+            var nameOk = first.value.trim().length > 0;
+            var emailOk = EMAIL.test(email.value.trim()) && email.checkValidity();
+            first.setAttribute("aria-invalid", nameOk ? "false" : "true");
+            email.setAttribute("aria-invalid", emailOk ? "false" : "true");
+            if (!nameOk || !emailOk) {
+              err.hidden = false;
+              (nameOk ? email : first).focus();
+              return;
+            }
+            err.hidden = true;
+            var label = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = "Sending...";
+            function finish() {
+              btn.disabled = false;
+              btn.textContent = label;
+              showDone(box);
+            }
+            fetch(URL_FORM, {
+              method: "POST",
+              mode: "no-cors",
+              body: new URLSearchParams({
+                "entry.685289002": first.value.trim(),
+                "entry.199991278": email.value.trim()
+              })
+            }).then(finish, finish);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
