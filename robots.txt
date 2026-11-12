@@ -1,0 +1,21 @@
+# robots.txt for mrbarricade511.com
+User-agent: *
+Allow: /
+
+# Search and AI answer crawlers are welcome
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mrbarricade511.com/sitemap.xml

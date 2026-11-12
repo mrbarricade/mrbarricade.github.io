@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><script>if(location.protocol==="http:"&&location.hostname!=="localhost")location.replace("https://"+location.host+location.pathname+location.search+location.hash)</script><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Do Traffic Lights Take So Long? | Mr. Barricade, PE</title><meta name="description" content="Traffic lights run timing plans with minimum greens, safety intervals, and coordination. An engineer explains sensors, signal timing, and long red lights."><meta name="theme-color" content="#2F3437">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Mr. Barricade"><meta property="og:title" content="Why Do Traffic Lights Take So Long? | Mr. Barricade, PE">
+<meta property="og:description" content="Traffic lights run timing plans with minimum greens, safety intervals, and coordination. An engineer explains sensors, signal timing, and long red lights."><meta property="og:url" content="https://mrbarricade511.com/answers/why-traffic-lights-take-so-long/"><meta property="og:image" content="https://mrbarricade511.com/vignesh-bike-lane.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Why Do Traffic Lights Take So Long? | Mr. Barricade, PE"><meta name="twitter:description" content="Traffic lights run timing plans with minimum greens, safety intervals, and coordination. An engineer explains sensors, signal timing, and long red lights."><link rel="canonical" href="https://mrbarricade511.com/answers/why-traffic-lights-take-so-long/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><style>:root{--ink:#2F3437;--ink-2:#5b6266;--orange:#F26A1B;--orange-dark:#d9560c;--orange-text:#b04405;--off:#f7f5f2;--line:#e6e2dc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--off);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--orange-text)}.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1160px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);text-decoration:none}.brand img{height:30px;width:auto}
+.nav nav{display:flex;gap:18px;align-items:center;font-weight:600;font-size:15px}.nav nav a{color:var(--ink);text-decoration:none}
+.btn{display:inline-block;background:var(--orange);color:#fff!important;padding:9px 16px;border-radius:999px;text-decoration:none;font-weight:700}.btn:hover{background:var(--orange-dark)}
+.hero{padding:56px 0 24px}.kicker{color:var(--orange-text);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:13px;margin:0 0 8px}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.15;margin:0 0 12px;letter-spacing:-.02em}.lede{color:var(--ink-2);font-size:18px;margin:0}
+.list{list-style:none;padding:0;margin:24px 0 64px;display:grid;gap:14px}
+.card{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;text-decoration:none;color:var(--ink);box-shadow:0 1px 2px rgba(47,52,55,.06),0 8px 28px rgba(47,52,55,.06)}
+.card:hover{border-color:var(--orange)}.card h2{margin:4px 0 6px;font-size:21px;line-height:1.3}.card p{margin:0;color:var(--ink-2)}.date{font-size:14px;color:var(--ink-2)}
+article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:36px clamp(20px,5vw,48px);margin:8px 0 28px;font-size:18px}article p{margin:0 0 1.1em}article h2{font-size:21px;margin:1.4em 0 .5em}article ul{margin:0 0 1.1em;padding-left:1.2em}article li{margin:0 0 .4em}
+.btn2{background:transparent;border:2px solid #fff;margin-left:6px}.btn2:hover{background:#fff;color:var(--ink)!important}.cta .btn{margin-top:4px}.cta{background:var(--ink);color:#fff;border-radius:18px;padding:28px;margin:0 0 64px}.cta h3{margin:0 0 6px;font-size:20px}.cta p{margin:0 0 16px;color:#d6d9db}
+.back{display:inline-block;margin:28px 0 0;font-weight:600;text-decoration:none}
+footer{border-top:1px solid var(--line);background:#fff;padding:24px 0;font-size:14px;color:var(--ink-2)}footer .wrap{max-width:1160px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}footer p{margin:0}
+@media(max-width:560px){.nav nav a.hide-s{display:none}}.answer{background:#fff7f1;border:1px solid #f6c9a8;border-left:5px solid var(--orange);border-radius:14px;padding:18px 22px;margin:0 0 1.4em;font-size:19px}.answer p{margin:0}.video{position:relative;width:100%;max-width:405px;aspect-ratio:9/16;margin:0 auto 1.2em;border-radius:14px;overflow:hidden;background:#000}.video.wide{max-width:none;aspect-ratio:16/9}.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.vcap{font-size:15px;color:var(--ink-2);text-align:center;margin:-.6em 0 1.4em}.faq h3{font-size:18px;margin:1.2em 0 .3em}.faq p{margin:0 0 .8em}.related{border-top:1px solid var(--line);margin-top:1.6em;padding-top:1em;font-size:16px}.related h2{font-size:18px;margin:0 0 .4em}.related ul{margin:0;padding-left:1.2em}</style>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Why do traffic lights take so long?",
+ "description": "Traffic lights run timing plans with minimum greens, safety intervals, and coordination. An engineer explains sensors, signal timing, and long red lights.",
+ "author": {
+  "@type": "Person",
+  "name": "Vignesh Swaminathan, PE",
+  "alternateName": "Mr. Barricade",
+  "url": "https://mrbarricade511.com/",
+  "sameAs": [
+   "https://www.tiktok.com/@mrbarricade",
+   "https://www.instagram.com/mrbarricade",
+   "https://www.youtube.com/@mrbarricade",
+   "https://x.com/viggyswam",
+   "https://www.linkedin.com/in/mrbarricade"
+  ]
+ },
+ "publisher": {
+  "@type": "Person",
+  "name": "Vignesh Swaminathan, PE",
+  "alternateName": "Mr. Barricade",
+  "url": "https://mrbarricade511.com/"
+ },
+ "datePublished": "2026-11-12",
+ "dateModified": "2026-11-12",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://mrbarricade511.com/answers/why-traffic-lights-take-so-long/"
+ },
+ "image": "https://mrbarricade511.com/vignesh-bike-lane.jpg",
+ "inLanguage": "en-US"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do traffic light sensors work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The most common sensor is an inductive loop, a coil of wire set in a slot in the pavement. When a vehicle stops over it, the detector sends a call to the signal controller, which decides when to serve that direction."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why do lights turn red with no one coming?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The signal may be coordinated with nearby lights, serving a pedestrian who pushed the button, or running on a fallback setting because a detector failed. FHWA notes a failed detector placed on maximum recall can raise delay by 50 percent or more."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is signal timing?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Signal timing is the set of rules that decides the order and length of each green, yellow, and red, plus walk and clearance times. For actuated signals that includes the minimum green, extension, and maximum green, and for coordinated corridors the cycle length, offset, and split."
+   }
+  }
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://mrbarricade511.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Answers",
+   "item": "https://mrbarricade511.com/answers/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Why do traffic lights take so long?",
+   "item": "https://mrbarricade511.com/answers/why-traffic-lights-take-so-long/"
+  }
+ ]
+}</script>
+</head>
+<body><header class="nav"><div class="wrap"><a class="brand" href="/"><img src="/logo.png" alt=""><span>Mr. Barricade</span></a>
+<nav><a class="hide-s" href="/">Home</a><a href="/blog/">Writing</a><a class="hide-s" href="/#work">Work With Me</a><a class="btn" href="/guide/">Free Guide</a></nav></div></header>
+<main class="wrap"><a class="back" href="/answers/">← All answers</a><section class="hero"><p class="kicker">Answers</p><h1>Why do traffic lights take so long?</h1><p class="lede">By Vignesh Swaminathan, PE (Mr. Barricade)</p></section><article><div class="answer"><p>Most traffic lights are running a timing plan, not reacting to you alone. Every direction, including people walking, gets a minimum amount of green, every change includes yellow and clearance time, and many signals stay in step with their neighbors. When a sensor fails or a plan was built for rush hour, you can end up waiting at an empty intersection.</p></div>
+<h2>Fixed timing versus sensors</h2>
+<p>Signals run in one of two basic ways. Pretimed signals repeat the same sequence on a set schedule, and FHWA notes that many agencies still use pretimed controllers. Actuated signals use detectors to decide how long each direction gets.</p>
+<p>An actuated signal still has rules. FHWA describes five basic settings for each movement: a minimum green, an extension that keeps the green going while cars keep arriving, a maximum green, a yellow, and a red. Each phase must have a minimum green so a stopped vehicle has time to get moving before yellow appears.</p>
+<!-- VIDEO: needs match -->
+<h2>How the sensors work</h2>
+<p>The most common sensor is the inductive loop: wire laid in a shallow slot cut into the pavement, connected to electronics in the signal cabinet. When a vehicle stops over it, the controller gets a call. FHWA's detector handbook says the loop has been the most utilized sensor in traffic management since it was introduced in the early 1960s.</p>
+<h2>Why it turns red when no one is coming</h2>
+<ul>
+<li><strong>Coordination.</strong> Signals along a corridor often share a cycle length, an offset, and a split so traffic can flow through several lights. Your light may be holding its place in that pattern.</li>
+<li><strong>People walking.</strong> If someone pushed the button, the signal has to time a walk interval plus clearance. The MUTCD sizes clearance for a walking speed of 3.5 feet per second, so a wide street needs a long walk phase.</li>
+<li><strong>Broken detection.</strong> When a loop fails, a common fix is to put that movement on maximum recall, which gives it full green every cycle. FHWA notes this can increase intersection delay by 50 percent or more.</li>
+</ul>
+<h2>The safety intervals you never notice</h2>
+<p>The MUTCD recommends a yellow change interval of 3 to 6 seconds, with the longer yellows on faster approaches, and a red clearance interval that generally should not exceed 6 seconds. Those few seconds, repeated for every movement, add up. They are also there so the person running the yellow does not meet the person starting on green.</p>
+<h2>What you can do</h2>
+<ul>
+<li>Report a light that seems stuck or slow through 311 or your city's transportation department. Give the intersection, your direction of travel, and the time of day.</li>
+<li>If the signal never seems to see your car or bike, say so. That points staff to a detection problem.</li>
+<li>Ask whether the intersection is part of a coordinated corridor and when its timing was last reviewed.</li>
+</ul>
+<section class="faq"><h2>Frequently asked questions</h2><h3>How do traffic light sensors work?</h3><p>The most common sensor is an inductive loop, a coil of wire set in a slot in the pavement. When a vehicle stops over it, the detector sends a call to the signal controller, which decides when to serve that direction.</p><h3>Why do lights turn red with no one coming?</h3><p>The signal may be coordinated with nearby lights, serving a pedestrian who pushed the button, or running on a fallback setting because a detector failed. FHWA notes a failed detector placed on maximum recall can raise delay by 50 percent or more.</p><h3>What is signal timing?</h3><p>Signal timing is the set of rules that decides the order and length of each green, yellow, and red, plus walk and clearance times. For actuated signals that includes the minimum green, extension, and maximum green, and for coordinated corridors the cycle length, offset, and split.</p></section><section class="related"><h2>Keep reading</h2><ul><li><a href="/answers/flashing-yellow-arrow/">What does a flashing yellow arrow mean?</a></li><li><a href="/answers/right-turn-on-red/">Why is right turn on red allowed, and why are cities banning it?</a></li><li><a href="/blog/walk-signal-head-start/">The walk signal head start</a></li><li><a href="/blog/crosswalk-without-a-traffic-light/">Not every crosswalk needs a traffic light</a></li></ul></section></article><section class="cta"><h3>Want to change your street?</h3><p>Get my free guide on how to ask your city for a safer crossing, a bike lane, or slower traffic, and what to say so staff can act on it.</p><a class="btn" href="/guide/">Get the free guide</a></section></main>
+<footer><div class="wrap"><p>Views are my own and don't represent my employer.</p><p>© 2026 Mr. Barricade</p></div></footer>
+<!--
+SOURCES (every factual claim on this page traces to one of these; fetched 2026-11-12)
+- FHWA Signal Timing on a Shoestring, Ch. IV (minimum green, extension, max green; cycle length, offset, split; pretimed controllers): https://ops.fhwa.dot.gov/publications/signal_timing/04.htm
+- FHWA Traffic Detector Handbook 3rd Ed. Vol I Ch. 2 (inductive loop most utilized sensor since early 1960s): https://www.fhwa.dot.gov/publications/research/operations/its/06108/02.cfm
+- FHWA Traffic Detector Handbook 3rd Ed. Vol II Ch. 6 (failed detector, max recall, delay up 50% or more; locked call extends green to max): https://www.fhwa.dot.gov/publications/research/operations/its/06139/chapt6.cfm
+- MUTCD 11th Ed. Part 4 (Sec. 4C.01 nine warrants and 'satisfaction of a warrant shall not in itself require'; 4C.05 Pedestrian Volume; 4F.17 yellow 3 to 6 s; pedestrian clearance 3.5 ft/s; flashing yellow arrow meaning): https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part4.pdf
+- FHWA, current MUTCD is 11th Edition with Revision 1, December 2025: https://mutcd.fhwa.dot.gov/kno_11th_Editionr1.htm
+-->
+</body></html>
